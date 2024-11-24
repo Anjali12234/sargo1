@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Livewire;
 
 use App\Models\Product;
@@ -53,7 +54,6 @@ class ProductLivewire extends Component
             'productKeyFeatures.*.feature' => 'required|string|max:255',
         ]);
 
-        
         $product = Product::updateOrCreate(
             ['id' => $this->productId],
             [
@@ -72,6 +72,17 @@ class ProductLivewire extends Component
 
         session()->flash('message', $this->productId ? 'Product updated successfully!' : 'Product created successfully!');
         return redirect()->route('admin.product.index'); // Redirect after saving
+    }
+
+    public function addProductKeyFeature()
+    {
+        $this->productKeyFeatures[] = ['feature' => '']; // Add a new empty feature
+    }
+
+    public function removeKeyFeature($index)
+    {
+        unset($this->productKeyFeatures[$index]); // Remove the feature at the given index
+        $this->productKeyFeatures = array_values($this->productKeyFeatures); // Reindex the array to prevent issues
     }
 
     public function render()

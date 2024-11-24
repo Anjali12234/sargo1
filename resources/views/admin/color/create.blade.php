@@ -55,22 +55,33 @@
                             @enderror
                         </span>
                     </div>
+                 
                     <div class="form-group col-md-6">
                         <label>Type</label>
-                        <select class="custom-select2 form-control" name="type" style="width: 100%; height: 38px">
+                        <select class="custom-select2 form-control" name="color_category_id" style="width: 100%; height: 38px">
                             <option value="">Type</option>
-                            @foreach(\App\Enums\ColorTypeEnum::cases() as $case)
-                            <option value="{{$case->value}}" >{{$case->label()}}</option>
+                            @foreach($colorCategories as $case)
+                            <option value="{{$case->id}}" >{{$case->color_name}}</option>
                             @endforeach
                         </select>
                         <span class="text-warning">
-                            @error('type')
+                            @error('color_category_id')
                                 {{ $message }}
                             @enderror
                         </span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="image">Image</label>
+                        <label for="color_code_image">Color Code Image</label>
+
+                        <input class="form-control" id="color_code_image" type="file" name="color_code_image">
+                        <span class="text-warning">
+                            @error('color_code_image')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="image">Color Code Example</label>
 
                         <input class="form-control" id="files" type="file" name="files[]" multiple>
                         <span class="text-warning">
@@ -125,7 +136,7 @@
                                 <td class="table-plus">{{ $loop->iteration }}</td>
                                
                                 <td>{{ $color->name }}</td>
-                                <td>{{ $color->type->label() }}</td>
+                                <td>{{ $color->colorCategory->color_name}}</td>
                                 <td>
                                     <div class="dropdown">
                                         <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"

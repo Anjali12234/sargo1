@@ -42,17 +42,23 @@
                     </ul>
                 </li>
                 <li class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle">
+                        <span class="micon bi bi-calendar4-week"></span><span class="mtext">Color</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="{{route('admin.colorCategory.create')}}">Color Category </a>
+                        </li>
+                        <li><a href="{{route('admin.color.create')}}">Color List</a></li>
+                       
+                    </ul>
+                </li>
+                <li class="dropdown">
                     <a href="{{route('admin.service.create')}}" class="dropdown-toggle no-arrow">
                         <span class="micon bi bi-archive"></span><span class="mtext">Services</span>
                     </a>
 
                 </li>
-                <li class="dropdown">
-                    <a href="{{route('admin.color.create')}}" class="dropdown-toggle no-arrow">
-                        <span class="micon bi bi-archive"></span><span class="mtext">Color</span>
-                    </a>
-
-                </li>
+      
 
                 
 
