@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <div class="title">
-                        <h4>color</h4>
+                        <h4>Color Category</h4>
                     </div>
                     <nav aria-label="breadcrumb" role="navigation">
                         <ol class="breadcrumb">
@@ -13,7 +13,7 @@
                                 <a href="{{ route('admin.dashboard') }}">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                color
+                                Color Category
                             </li>
                         </ol>
                     </nav>
@@ -31,46 +31,17 @@
                     </ul>
                 </div>
             @endif
-            <form method="post" action="{{ route('admin.color.update', $color) }}"
+            <form method="post" action="{{ route('admin.colorCategory.update', $colorCategory) }}"
                 enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="col-md-12 row">
                     <div class="form-group col-md-6">
-                        <label for="name">Color Name</label>
-                        <input class="form-control" id="name" name="name" type="text"
-                            value="{{ old('name', $color->name) }}" />
+                        <label for="color_name">Color Name</label>
+                        <input class="form-control" id="color_name" name="color_name" type="text"
+                            value="{{ old('color_name', $colorCategory->color_name) }}" />
                         <span class="text-warning">
-                            @error('name')
-                                {{ $message }}
-                            @enderror
-                        </span>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="color_code">Color Code</label>
-                        <input class="form-control" id="color_code" name="color_code" type="text"
-                            value="{{ old('color_code',$color->color_code) }}" />
-                        <span class="text-warning">
-                            @error('color_code')
-                                {{ $message }}
-                            @enderror
-                        </span>
-                    </div>
-                    
-                    <div class="form-group col-md-6">
-                        <label>Type</label>
-                        <select class="custom-select2 form-control" name="color_category_id" style="width: 100%; height: 38px">
-                            <option value="">Type</option>
-                            @foreach($colorCategories as $case)
-                            <option value="{{$case->id}}"
-                                {{ old('color_category_id', $color->color_category_id) == $case->id ? 'selected' : '' }}>
-                                {{ $case->color_name }}
-
-                            </option>
-                            @endforeach
-                        </select>
-                        <span class="text-warning">
-                            @error('color_category_id')
+                            @error('color_name')
                                 {{ $message }}
                             @enderror
                         </span>
@@ -85,16 +56,7 @@
                             @enderror
                         </span>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="image">Color Code Example</label>
-
-                        <input class="form-control" id="files" type="file" name="files[]" multiple>
-                        <span class="text-warning">
-                            @error('image')
-                                {{ $message }}
-                            @enderror
-                        </span>
-                    </div>
+                  
 
 
                 </div>
@@ -102,7 +64,7 @@
                     <div class="form-group col-md-6">
                         <label for="slug">Slug</label>
                         <input class="form-control" id="slug" name="slug" type="text"
-                            value="{{ old('slug', $color->slug) }}" />
+                            value="{{ old('slug', $colorCategory->slug) }}" />
                         <span class="text-warning">
                             @error('slug')
                                 {{ $message }}
@@ -112,31 +74,17 @@
                     <div class="form-group col-md-6">
                         <label for="position">Position</label>
                         <input class="form-control" id="position" name="position" type="text"
-                            value="{{ old('position', $color->position) }}" />
+                            value="{{ old('position', $colorCategory->position) }}" />
                         <span class="text-warning">
                             @error('position')
                                 {{ $message }}
                             @enderror
                         </span>
-                    </div>
-                   
+                    </div>                 
 
 
                 </div>
-                <div class="col-md-12 row">
-                    <div class="form-group col-md-12">
-                        <label for="description">Description</label>
-                        <textarea name="description" id="editor" cols="50" rows="10">{{ old('description', $color->description) }}</textarea>
-                        <span class="text-warning">
-                            @error('description')
-                                {{ $message }}
-                            @enderror
-                        </span>
-                    </div>
-
-
-
-                </div>
+             
 
                 <div>
                     <button class="btn btn-danger" type="submit">Submit</button>

@@ -16,8 +16,9 @@ class UpdateColorRequest extends FormRequest
     {
         return [
 
-            'type' => ['required'],
+            'color_category_id' => ['required'],
             'name' => ['required','string'],
+            'color_code_image' => ['nullable','image'],
             'color_code' => ['required','string'],
             'description' => ['required'],
             'files' => ['nullable', 'array'],
