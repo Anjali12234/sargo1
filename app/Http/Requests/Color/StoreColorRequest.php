@@ -16,8 +16,9 @@ class StoreColorRequest extends FormRequest
     {
         return [
 
-            'type' => ['required'],
+            'color_category_id' => ['required'],
             'name' => ['required','string'],
+            'color_code_image' => ['required','image'],
             'color_code' => ['required','string'],
             'description' => ['required'],
             'files' => ['required', 'array'],

@@ -31,9 +31,10 @@
     <div>
         <label>Key Features</label>
         @foreach($productKeyFeatures as $index => $feature)
-            <div class="d-flex">
+            <div class="d-flex mb-4">
                 <input type="text" wire:model="productKeyFeatures.{{ $index }}.feature" class="form-control">
                 <button type="button" wire:click="removeKeyFeature({{ $index }})" class="btn btn-danger ml-2">Remove</button>
+            
             </div>
             @error("productKeyFeatures.{$index}.feature")
                 <span class="text-danger">{{ $message }}</span>

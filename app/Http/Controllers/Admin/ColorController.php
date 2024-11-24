@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Color\StoreColorRequest;
 use App\Http\Requests\Color\UpdateColorRequest;
 use App\Models\Color;
+use App\Models\ColorCategory;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -13,8 +14,9 @@ class ColorController extends Controller
 {
     public function create()
     {
+        $colorCategories = ColorCategory::all();
         $colors = Color::paginate(10);
-        return view('admin.color.create',compact('colors'));
+        return view('admin.color.create',compact('colors','colorCategories'));
     }
     
     public function store(StoreColorRequest $request)
@@ -26,7 +28,9 @@ class ColorController extends Controller
 
     public function edit(Color $color)
     {
-        return view('admin.color.edit',compact('color'));
+        $colorCategories = ColorCategory::all();
+
+        return view('admin.color.edit',compact('color','colorCategories'));
     }
 
     public function update(UpdateColorRequest $request, Color $color)

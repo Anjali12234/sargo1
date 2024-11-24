@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Color;
+use App\Models\ColorCategory;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\Service;
@@ -33,6 +35,12 @@ class FrontendController extends Controller
 
     public function color()
     {
-        return view('frontend.color.color');
+        $colorCategories = ColorCategory::all();
+        return view('frontend.color.color',compact('colorCategories'));
+    }
+
+    public function colorDetail(Color $color)
+    {
+        return view('frontend.color.colorDetail',compact('color'));
     }
 }

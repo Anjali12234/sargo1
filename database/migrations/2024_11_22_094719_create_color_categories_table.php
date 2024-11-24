@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('colors', function (Blueprint $table) {
+        Schema::create('color_categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('color_category_id')->nullable()->constrained()->cascadeOnDelete();
-            $table->string('name');
+            $table->string('color_name');
             $table->string('color_code_image');
-            $table->string('color_code');
             $table->string('slug')->nullable();
-            $table->longText('description');
             $table->string('position')->nullable();
             $table->softDeletes();
             $table->timestamps();
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('colors');
+        Schema::dropIfExists('color_categories');
     }
 };
