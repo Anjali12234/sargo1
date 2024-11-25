@@ -2,6 +2,7 @@
 
 use App\Models\ProductCategory;
 use App\Models\Slider;
+use App\Models\SystemSetting;
 use Illuminate\Support\Facades\Cache;
 
 if (!function_exists('productCategories')) {
@@ -16,5 +17,13 @@ if (!function_exists('sliders')) {
     {
         return Slider::all();
       
+    }
+}
+if (!function_exists('setting')) {
+    function setting()
+    {
+        return Cache::rememberForever('setting', function () {
+            return SystemSetting::latest()->first();
+        });
     }
 }

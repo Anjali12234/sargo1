@@ -5,7 +5,7 @@
             class="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center gap-x-1">
                 <a class="flex-none font-semibold text-2xl text-black focus:outline-none focus:opacity-80 dark:text-white"
-                    href="#" aria-label="Brand">Brand</a>
+                    href="{{route('welcome')}}" aria-label="Brand">Sargo</a>
 
                 <!-- Collapse Button -->
                 <button type="button"

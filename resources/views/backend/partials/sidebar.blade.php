@@ -2,7 +2,7 @@
     <div class="brand-logo bg-white border-neutral-600">
         <a href="{{ route('admin.dashboard') }}">
             <img src="" alt="" />
-            <h5>Sargo Paints</h5>
+            <h5>{{setting()->name}}</h5>
 
         </a>
         <div class="close-sidebar" data-toggle="left-sidebar-close">
@@ -19,7 +19,7 @@
 
                 </li>
                 <li class="dropdown">
-                    <a href="" class="dropdown-toggle no-arrow">
+                    <a href="{{route('admin.systemSetting.index')}}" class="dropdown-toggle no-arrow">
                         <span class="micon bi bi-textarea-resize"></span><span class="mtext">System Setting</span>
                     </a>
 
