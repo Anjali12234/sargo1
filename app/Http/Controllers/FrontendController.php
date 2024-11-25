@@ -10,7 +10,7 @@ use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\Service;
 use App\Models\Slider;
-
+use App\Models\WhyChoose;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -32,8 +32,9 @@ class FrontendController extends Controller
     }
     public function service($value)
     {
+        $whyChooses = WhyChoose::all();
       $services = Service::where('type', $value)->get();
-      return view('frontend.service.serviceList', compact('services'));
+      return view('frontend.service.serviceList', compact('services','whyChooses'));
     }
 
     public function color()

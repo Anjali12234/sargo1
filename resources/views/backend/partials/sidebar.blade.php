@@ -64,6 +64,12 @@
                     </a>
 
                 </li>
+                <li class="dropdown">
+                    <a href="{{route('admin.whyChoose.create')}}" class="dropdown-toggle no-arrow">
+                        <span class="micon bi bi-archive"></span><span class="mtext">Why Choose Us</span>
+                    </a>
+
+                </li>
 
 
 
