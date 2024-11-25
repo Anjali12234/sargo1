@@ -127,7 +127,7 @@
                     data-toggle="dropdown"
                 >
                     <span class="user-icon" >
-                        <img class="pt-3" src="{{ asset('assets/backend/vendors/images/logo.png') }}" height="100" width="100" alt="" />
+                        <img class="" src="{{setting()->logo1}}" height="100" width="100" alt="" />
 
                         {{-- <img src="{{ asset('assets/backend/vendors/images/photo1.jpg')}}" alt="" /> --}}
                     </span>
@@ -139,12 +139,7 @@
                     <a class="dropdown-item" href="{{ route('admin.profile.edit') }}"
                         ><i class="dw dw-user1"></i> Profile</a
                     >
-                    <a class="dropdown-item" href="profile.html"
-                        ><i class="dw dw-settings2"></i> Setting</a
-                    >
-                    <a class="dropdown-item" href="faq.html"
-                        ><i class="dw dw-help"></i> Help</a
-                    >
+                    
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit" class="dropdown-item">
