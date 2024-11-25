@@ -56,10 +56,10 @@
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                                             <a class="dropdown-item"
-                                                href="{{ route('admin.enquiry-message.show', $enquiry) }}"><i
+                                                href="{{ route('admin.enquiry.show', $enquiry) }}"><i
                                                     class="dw dw-view"></i>view</a>
 
-                                            <form action="{{ route('admin.enquiry-message.destroy', $enquiry) }}"
+                                            <form action="{{ route('admin.enquiry.destroy', $enquiry) }}"
                                                 method="POST" style="display: inline">
                                                 @csrf
                                                 @method('DELETE')

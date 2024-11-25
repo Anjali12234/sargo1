@@ -59,7 +59,7 @@
 
                 </li>
                 <li class="dropdown">
-                    <a href="{{route('admin.enquiry-message.index')}}" class="dropdown-toggle no-arrow">
+                    <a href="{{route('admin.enquiry.index')}}" class="dropdown-toggle no-arrow">
                         <span class="micon bi bi-archive"></span><span class="mtext">Enquiry Messages</span>
                     </a>
 
