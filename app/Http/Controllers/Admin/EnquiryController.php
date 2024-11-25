@@ -22,7 +22,6 @@ class EnquiryController extends Controller
 
     public function show(Enquiry $enquiry)
     {
-        dd($enquiry);
         return view('admin.enquiry.show',compact('enquiry'));
     }
 

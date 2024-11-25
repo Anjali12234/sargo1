@@ -21,7 +21,7 @@ Route::resource('productCategory', ProductCategoryController::class);
 Route::resource('service', ServiceController::class);
 Route::resource('color', ColorController::class);
 Route::resource('colorCategory', ColorCategoryController::class);
-Route::resource('enquiry-message', EnquiryController::class);
+Route::resource('enquiry', EnquiryController::class);
 
 Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

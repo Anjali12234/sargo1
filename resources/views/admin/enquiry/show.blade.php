@@ -13,7 +13,7 @@
                                 <a href="{{ route('admin.dashboard') }}">Home</a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="{{ route('admin.enquiry-message.index') }}">Enquiry Messages</a>
+                                <a href="{{ route('admin.enquiry.index') }}">Enquiry Messages</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Enquiry Details
@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="mt-4">
-                            <a href="{{ route('admin.enquiry-message.index') }}" class="btn btn-primary">Back to List</a>
+                            <a href="{{ route('admin.enquiry.index') }}" class="btn btn-primary">Back to List</a>
                         </div>
                     </div>
                 </div>
