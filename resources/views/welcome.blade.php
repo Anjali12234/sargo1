@@ -453,7 +453,7 @@
                             href="#">Carriers</a></p>
                     <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200"
                             href="#">Contact US</a></p>
-               
+
                 </div>
             </div>
             <!-- End Col -->
@@ -464,7 +464,7 @@
                 <div class="mt-3 grid space-y-3 text-sm">
                     <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200"
                             href="#">Color Visualizer</a></p>
-               
+
                 </div>
             </div>
             <!-- End Col -->
@@ -497,7 +497,7 @@
                 <div class="mt-3 grid space-y-3 text-sm">
                     <p><a class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200"
                             href="#">FAQ</a></p>
-                   
+
                 </div>
 
 

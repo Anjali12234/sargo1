@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    
+
+    @include('sweetalert::alert')
+
 @include('frontend.layouts.header')
    @include('frontend.layouts.navbar')
 
@@ -21,7 +23,7 @@
     @include('frontend.layouts.footer')
 
 
-    
+
     <script>
         let currentSlide = 0;
         const items = document.querySelectorAll('.carousel-item');

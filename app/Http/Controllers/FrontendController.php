@@ -2,20 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Enquiry\StoreEnquiryRequest;
 use App\Models\Color;
 use App\Models\ColorCategory;
+use App\Models\Enquiry;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\Service;
 use App\Models\Slider;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class FrontendController extends Controller
 {
     public function index()
     {
-        
+
         return view('frontend.index');
     }
 
@@ -42,5 +45,12 @@ class FrontendController extends Controller
     public function colorDetail(Color $color)
     {
         return view('frontend.color.colorDetail',compact('color'));
+    }
+    public function enquiry(StoreEnquiryRequest $request)
+    {
+
+        Enquiry::create($request->validated());
+        Alert::success('Enquiry submitted successfully');
+        return back();
     }
 }

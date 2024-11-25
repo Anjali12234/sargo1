@@ -14,6 +14,7 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('productCategory/{productCategory:slug}', 'productCategory')->name('productCategory');
     Route::get('product/{product:slug}','productDetail')->name('productDetail');
     Route::get('/service/{value}', 'service')->name('service');
+    Route::post('enquiry','enquiry')->name('enquiry');
 
 });
 
