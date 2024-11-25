@@ -38,7 +38,7 @@
                         <li><a href="{{route('admin.productCategory.create')}}">Product Category </a>
                         </li>
                         <li><a href="{{route('admin.product.index')}}">Product</a></li>
-                       
+
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -49,7 +49,7 @@
                         <li><a href="{{route('admin.colorCategory.create')}}">Color Category </a>
                         </li>
                         <li><a href="{{route('admin.color.create')}}">Color List</a></li>
-                       
+
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -58,9 +58,15 @@
                     </a>
 
                 </li>
-      
+                <li class="dropdown">
+                    <a href="{{route('admin.enquiry-message.index')}}" class="dropdown-toggle no-arrow">
+                        <span class="micon bi bi-archive"></span><span class="mtext">Enquiry Messages</span>
+                    </a>
 
-                
+                </li>
+
+
+
 
             </ul>
         </div>

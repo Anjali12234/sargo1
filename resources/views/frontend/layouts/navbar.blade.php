@@ -9,9 +9,9 @@
 
                 <!-- Collapse Button -->
                 <button type="button"
-                    class="hs-collapse-toggle md:hidden relative size-9 flex justify-center items-center 
-                    font-medium text-[12px] rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 
-                    focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none 
+                    class="hs-collapse-toggle md:hidden relative size-9 flex justify-center items-center
+                    font-medium text-[12px] rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100
+                    focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none
                     dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
                     id="hs-header-base-collapse" aria-expanded="false" aria-controls="hs-header-base"
                     aria-label="Toggle navigation" data-hs-collapse="#hs-header-base">
@@ -39,7 +39,7 @@
                 aria-labelledby="hs-header-base-collapse">
                 <div
                     class="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full
-                     [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 
+                     [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300
                      dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
                     <div class="py-2 md:py-0  flex flex-col md:flex-row md:items-center gap-0.5 md:gap-1">
                         <div class="grow">
@@ -47,11 +47,11 @@
 
                                 <!-- Dropdown -->
                                 <div
-                                    class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true] 
+                                    class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true]
                                     md:[--is-collapse:false] ">
                                     <button id="hs-header-base-dropdown" type="button"
-                                        class="hs-dropdown-toggle w-full p-2 flex items-center text-lg font-semibold text-gray-800 hover:bg-gray-100 
-                                    rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 
+                                        class="hs-dropdown-toggle w-full p-2 flex items-center text-lg font-semibold text-gray-800 hover:bg-gray-100
+                                    rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700
                                     dark:focus:bg-neutral-700"
                                         aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
                                         <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden"

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ColorCategoryController;
 use App\Http\Controllers\Admin\ColorController;
+use App\Http\Controllers\Admin\EnquiryController;
 use App\Http\Controllers\Admin\ProductCategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ServiceController;
@@ -20,6 +21,7 @@ Route::resource('productCategory', ProductCategoryController::class);
 Route::resource('service', ServiceController::class);
 Route::resource('color', ColorController::class);
 Route::resource('colorCategory', ColorCategoryController::class);
+Route::resource('enquiry-message', EnquiryController::class);
 
 Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
