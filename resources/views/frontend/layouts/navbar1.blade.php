@@ -2,7 +2,7 @@
     <div class='flex flex-wrap items-center justify-between px-1 py-3 gap-4 w-full h-20 lg:h-28'>
         <div class='flex items-center gap-4 px-10'>
             <a href="javascript:void(0)">
-                <img src="{{ asset('assets/frontend/static image/logo1.jpg') }}" alt="logo" class='w-44 h-20' />
+                <img src="{{setting()?->logo1}}" alt="logo" class='w-44 h-20' />
             </a>
 
         </div>
