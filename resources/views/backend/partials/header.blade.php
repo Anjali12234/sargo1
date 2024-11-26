@@ -127,11 +127,11 @@
                     data-toggle="dropdown"
                 >
                     <span class="user-icon" >
-                        <img class="" src="{{setting()->logo1}}" height="100" width="100" alt="" />
+                        <img class="" src="{{setting()?->logo1}}" height="100" width="100" alt="" />
 
                         {{-- <img src="{{ asset('assets/backend/vendors/images/photo1.jpg')}}" alt="" /> --}}
                     </span>
-                    <span class="user-name">{{ Auth::user()->name }}</span>
+                    <span class="user-name">{{ Auth::user()?->name }}</span>
                 </a>
                 <div
                     class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
