@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -17,6 +18,7 @@ Route::controller(FrontendController::class)->group(function () {
     Route::post('enquiry','enquiry')->name('enquiry');
 
 });
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

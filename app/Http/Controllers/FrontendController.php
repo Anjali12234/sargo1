@@ -18,6 +18,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
+        session()->flash('showPopup', true);
 
         return view('frontend.index');
     }
