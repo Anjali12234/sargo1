@@ -21,7 +21,7 @@ class StoreColorRequest extends FormRequest
             'color_code_image' => ['required','image'],
             'color_code' => ['required','string'],
             'description' => ['required'],
-            'files' => ['required', 'array'],
+           'files' => ['required', 'array'],
             'files.*' => ['mimes:png,jpg,jpeg,pdf,jfif'],
         ];
     }

@@ -143,8 +143,24 @@
                 </div>
             </form>
 
+            <div class="grid grid-cols-4 gap-2 ...">
+                
+                @foreach ($color->files as $file)
+                    <div class="flex p-9">
+                        @dd($file);
+                        <img src="{{ $file->file_url }}" height="200" width="200" alt="">
+                        <form action="{{ route('file.destroy', $file) }}" method="post" style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger"
+                                onclick="return confirm('Are you sure you want to delete?')">
+                                <i class="ti ti-xbox-x text-4xl font-bold"></i>
+                            </button>
+                        </form>
+                    </div>
+                @endforeach
+            </div>
         </div>
-
 
     </div>
 @endsection

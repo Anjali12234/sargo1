@@ -18,6 +18,7 @@ class FrontendController extends Controller
 {
     public function index()
     {
+        session()->flash('showPopup', true);
 
         return view('frontend.index');
     }
@@ -45,6 +46,8 @@ class FrontendController extends Controller
 
     public function colorDetail(Color $color)
     {
+        $color->load('files');
+   
         return view('frontend.color.colorDetail',compact('color'));
     }
     public function enquiry(StoreEnquiryRequest $request)
