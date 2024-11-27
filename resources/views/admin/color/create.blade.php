@@ -90,8 +90,6 @@
                             @enderror
                         </span>
                     </div>
-
-
                 </div>
                 <div class="col-md-12 row">
                     <div class="form-group col-md-12">
@@ -103,28 +101,21 @@
                             @enderror
                         </span>
                     </div>
-
-
-
                 </div>
-
                 <div>
                     <button class="btn btn-danger" type="submit">Submit</button>
                 </div>
             </form>
-
         </div>
         <div class="pd-20 card-box mb-30">
             <div class="pd-20">
                 <h4 class="text-blue h4">Color  List</h4>
-
             </div>
             <div class="pb-20">
                 <table class="data-table table stripe hover nowrap">
                     <thead>
                         <tr>
-                            <th class="table-plus datatable-nosort">S.No</th>
-                           
+                            <th class="table-plus datatable-nosort">S.No</th>                           
                             <th>Title </th>
                             <th>Type </th>
                             <th>Action</th>
@@ -133,8 +124,7 @@
                     <tbody>
                         @foreach ($colors as $key => $color)
                             <tr>
-                                <td class="table-plus">{{ $loop->iteration }}</td>
-                               
+                                <td class="table-plus">{{ $loop->iteration }}</td>                               
                                 <td>{{ $color->name }}</td>
                                 <td>{{ $color->colorCategory->color_name}}</td>
                                 <td>
