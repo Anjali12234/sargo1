@@ -17,8 +17,8 @@ class StoreProductCategoryRequest extends FormRequest
         return [
             'title' => ['required','string'],
             'type' => ['required','string'],
-            'image' => ['required','image'],
-            'description' => ['required'],
+            'image' => ['nullable','image'],
+            'description' => ['nullable'],
         ];
     }
 }

@@ -128,22 +128,22 @@
                     <!-- Thumbnails -->
                     <div class="flex space-x-2 mt-4 overflow-x-auto pb-2">
                         <div class="thumbnail" onclick="setSlide(0)">
-                            <img src="{{ asset('assets/frontend/staticimage/banner1.jpg') }}" alt="Thumbnail 1"
+                            <img src="{{ asset('assets/frontend/staticimage/blue.png') }}" alt="Thumbnail 1"
                                 class="w-32 h-24 object-cover cursor-pointer rounded border-2 border-transparent active-thumbnail">
                             <p class="font-bold text-sm text-neutral-700">Tranquill Bl..</p>
-                            <p class="text-base font-semibold">9856</p>
+                            <p class="text-base font-semibold">9215</p>
                         </div>
                         <div class="thumbnail" onclick="setSlide(1)">
-                            <img src="{{ asset('assets/frontend/staticimage/banner2.jpg') }}" alt="Thumbnail 2"
+                            <img src="{{ asset('assets/frontend/staticimage/red.png') }}" alt="Thumbnail 2"
                                 class="w-32 h-24 object-cover cursor-pointer rounded border-2 border-transparent">
                             <p class="font-bold text-sm text-neutral-700">Velvet Dre..</p>
-                            <p class="text-base font-semibold">9856</p>
+                            <p class="text-base font-semibold">8117</p>
                         </div>
                         <div class="thumbnail hidden lg:block" onclick="setSlide(2)">
-                            <img src="{{ asset('assets/frontend/staticimage/banner3.jpg') }}" alt="Thumbnail 3"
+                            <img src="{{ asset('assets/frontend/staticimage/green.png') }}" alt="Thumbnail 3"
                                 class="w-32 h-24 object-cover cursor-pointer rounded border-2 border-transparent">
                             <p class="font-bold text-sm text-neutral-700">Lasting Spre..</p>
-                            <p class="text-base font-semibold">9856</p>
+                            <p class="text-base font-semibold">9350</p>
                         </div>
                     </div>
                 </div>

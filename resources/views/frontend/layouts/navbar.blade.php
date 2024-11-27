@@ -295,9 +295,6 @@
                                             data-hs-combo-box-input="">
                                         </form>
                                     </div>
-
-
-                                    <!-- End SearchBox -->
                                 </div>
                             </div>
                             <!-- End Button Group -->
