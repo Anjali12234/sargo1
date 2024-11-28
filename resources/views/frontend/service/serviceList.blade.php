@@ -1,17 +1,8 @@
 @extends('frontend.layouts.master')
 
 @section('mainContainer')
-    <div class="relative w-full sm:w-auto">
-        <img src="{{asset("assets/frontend/staticimage/service.jpg")}}"
-            alt="Ad Image 1" class="w-full h-96">
-        {{-- <div class="absolute inset-0 flex flex-col mt-10 items-center bg-opacity-50 text-white px-3 rounded">
-            <h1 class="font-slabo  text-center text-sm">COLOUR CATALOGUE</h1>
-            <p class="text-5xl font-semibold text-center mt-3"> <span> See 1800+colours</span><br />
-                <span> for wall inspirations</span>
-            </p>
+<x-carousel :sliders="$sliders"/>
 
-        </div> --}}
-    </div>
     <div class="mx-0 lg:mx-20 my-0 lg:my-10">
         <div>
          <p class="text-slate-500">

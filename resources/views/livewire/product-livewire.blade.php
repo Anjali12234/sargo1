@@ -4,13 +4,18 @@
         <input id="title" type="text" class="form-control" wire:model="title">
         @error('title') <span class="text-danger">{{ $message }}</span> @enderror
     </div>
+    <div class="form-group">
+        <label for="bg_title">Title</label>
+        <input id="bg_title" type="text" class="form-control" wire:model="bg_title">
+        @error('bg_title') <span class="text-danger">{{ $message }}</span> @enderror
+    </div>
 
     <div class="form-group">
         <label for="product_category_id">Category</label>
         <select id="product_category_id" class="form-control" wire:model="product_category_id">
             <option value="">Select a category</option>
             @foreach($productCategories as $category)
-                <option value="{{ $category->id }}">{{ $category->title }}</option>
+                <option value="{{ $category->id }}">{{ $category->title }} | {{$category->type->label()}}</option>
             @endforeach
         </select>
         @error('product_category_id') <span class="text-danger">{{ $message }}</span> @enderror
@@ -20,6 +25,11 @@
         <label for="image">Image</label>
         <input id="image" type="file" class="form-control" wire:model="image">
         @error('image') <span class="text-danger">{{ $message }}</span> @enderror
+    </div>
+    <div class="form-group">
+        <label for="bg_image">Background Image</label>
+        <input id="bg_image" type="file" class="form-control" wire:model="bg_image">
+        @error('bg_image') <span class="text-danger">{{ $message }}</span> @enderror
     </div>
 
     <div class="form-group">

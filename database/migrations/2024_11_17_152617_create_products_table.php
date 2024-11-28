@@ -13,7 +13,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('product_category_id')->nullable()->constrained()->cascadeOnDelete();
             $table->string('title');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('slug')->nullable();
             $table->longText('description');
             $table->string('position')->nullable();

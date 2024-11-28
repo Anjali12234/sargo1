@@ -23,10 +23,16 @@
 
         @foreach ($productCategory->products as $product)
             <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-                <a href="#">
+                {{-- <a href="#">
                     <!-- Product Image -->
                     <img src="{{ $product->image }}" alt="Product" class="h-60 w-72 object-cover rounded-t-xl" />
-                </a>
+                </a> --}}
+                <div class="flex items-center justify-center ">
+                    <a href="#" class="relative">
+                        <img class="w-48 h-56 object-cover" src="{{ $product->image }}"
+                            alt="{{ $product->title }}">
+                    </a>
+                </div>
                 <!-- Product Details -->
                 <div class="px-4 py-3 w-72">
                     <p class="text-lg font-bold text-black truncate block capitalize">{{ $product->title }}</p>

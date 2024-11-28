@@ -15,6 +15,8 @@ class ProductLivewire extends Component
     public $productId;
     public $title;
     public $image;
+    public $bg_image;
+    public $bg_title;
     public $description;
     public $productCategories;
     public $product_category_id;
@@ -37,6 +39,7 @@ class ProductLivewire extends Component
         $product = Product::with('productKeyFeatures')->findOrFail($this->productId);
 
         $this->title = $product->title;
+        $this->bg_title = $product->bg_title;
         $this->description = $product->description;
         $this->product_category_id = $product->product_category_id;
         $this->productKeyFeatures = $product->productKeyFeatures->map(function ($keyFeature) {
@@ -49,7 +52,9 @@ class ProductLivewire extends Component
         $this->validate([
             'product_category_id' => 'required|integer|exists:product_categories,id',
             'title' => 'required|string|max:255',
+            'bg_title' => 'required|string|max:255',
             'image' => 'nullable|image',
+            'bg_image' => 'nullable|image',
             'description' => 'nullable|string',
             'productKeyFeatures.*.feature' => 'required|string|max:255',
         ]);
@@ -59,7 +64,9 @@ class ProductLivewire extends Component
             [
                 'product_category_id' => $this->product_category_id,
                 'title' => $this->title,
+                'bg_title' => $this->bg_title,
                 'image' => $this->image,
+                'bg_image' => $this->bg_image,
                 'description' => $this->description,
             ]
         );

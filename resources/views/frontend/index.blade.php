@@ -1,9 +1,8 @@
 @extends('frontend.layouts.master')
 
 @section('mainContainer')
-    @include('frontend.layouts.carousel')
 
-
+    <x-carousel :sliders="$sliders"/>
     {{-- popup --}}
 
     <div class="relative">

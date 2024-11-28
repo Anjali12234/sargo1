@@ -49,6 +49,23 @@
                         </span>
                     </div>
                     <div class="form-group col-md-6">
+                        <label>Type</label>
+                        <select class="custom-select2 form-control" name="type" style="width: 100%; height: 38px">
+                            <option value="">Type</option>
+                            @foreach(\App\Enums\SliderTypeEnum::cases() as $case)
+                            <option value="{{ $case->value }}" 
+                                {{old('type',$slider->type)==$case->value ? 'selected':''}}>
+                            {{ $case->label() }}
+                        </option>
+                            @endforeach
+                        </select>
+                        <span class="text-warning">
+                            @error('type')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+                    <div class="form-group col-md-6">
                         <label for="image">Image</label>
                         <img src="{{ $slider?->image }}" height="100" width="100" alt="">
 
