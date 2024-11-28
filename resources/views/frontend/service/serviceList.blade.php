@@ -4,7 +4,7 @@
 <x-carousel :sliders="$sliders"/>
 
     <div class="mx-0 lg:mx-20 my-0 lg:my-10">
-        <div>
+        <div class="text-center">
          <p class="text-slate-500">
                Painting your home is exciting, but choosing the right colours, products, and house 
                 painters while ensuring your family’s safety can be a huge task. That's where we come in 
