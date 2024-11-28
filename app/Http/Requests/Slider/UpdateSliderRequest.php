@@ -16,6 +16,8 @@ class UpdateSliderRequest extends FormRequest
     {
         return [
             'title' => ['nullable','string'],
+            'type' => ['required','string'],
+
             'image' => ['nullable','image'],
         ];
     }

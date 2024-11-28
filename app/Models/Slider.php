@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\SliderTypeEnum;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -15,8 +16,11 @@ class Slider extends Model
     protected $fillable = [
         'title',
         'image',
+        'type',
     ];
-
+    protected $casts = [
+        'type' => SliderTypeEnum::class,
+    ];
     protected function image(): Attribute
     {
         return Attribute::make(

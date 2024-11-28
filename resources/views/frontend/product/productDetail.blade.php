@@ -1,13 +1,23 @@
 @extends('frontend.layouts.master')
 
 @section('mainContainer')
-    @include('frontend.layouts.carousel')
+
+<div class="relative w-full sm:w-auto">
+    <img src="{{ $product->bg_image }}"
+        alt="Ad Image 1" class="w-full h-96">
+    <div class="absolute inset-0 flex flex-col mt-20 items-center bg-opacity-50 text-white px-3 rounded">
+        <h1 class="font-slabo  text-center text-base">{{ $product->bg_title }}</h1>
+        <p class="text-6xl font-semibold text-center mt-3"> <span> {{ $product->title }}</span>
+        </p>
+
+    </div>
+</div>
 
     <div class="mx-0 lg:mx-20 my-0 lg:my-20 mt-10">
         <div class="flex flex-col items-center justify-center h-screen bg-gray-100 px-6">
 
             <div class="mb-6">
-                <img src="{{ $product->image }}" alt="Product" class="w-80 h-80 object-cover rounded-xl shadow-md">
+                <img src="{{ $product->image }}" alt="Product" class="w-72 h-80 object-cover rounded-xl shadow-md">
             </div>
 
 
@@ -47,7 +57,6 @@
                     <a href="#" class="relative">
                         <img class="w-30 h-56 object-cover" src="{{ asset('assets/frontend/staticimage/step.png') }}"
                             alt="Step 1 Image">
-                        <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition-all duration-300"></div>
                     </a>
                 </div>
 
@@ -66,7 +75,6 @@
                     <a href="#" class="relative">
                         <img class="w-30 h-56 object-cover" src="{{ asset('assets/frontend/staticimage/step2.png') }}"
                             alt="Step 1 Image">
-                        <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition-all duration-300"></div>
                     </a>
                 </div>
                 <div class="px-6 py-4 bg-white text-center">
@@ -85,7 +93,6 @@
                     <a href="#" class="relative">
                         <img class="w-30 h-56 object-cover" src="{{ asset('assets/frontend/staticimage/step3.png') }}"
                             alt="Step 1 Image">
-                        <div class="absolute inset-0 bg-black opacity-25 hover:opacity-0 transition-all duration-300"></div>
                     </a>
                 </div>
                 <div class="px-6 py-4 bg-white text-center">

@@ -1,26 +1,18 @@
 @extends('frontend.layouts.master')
 
 @section('mainContainer')
-    <div class="relative w-full sm:w-auto">
-        <img src="{{asset("assets/frontend/staticimage/service.jpg")}}"
-            alt="Ad Image 1" class="w-full h-96">
-        {{-- <div class="absolute inset-0 flex flex-col mt-10 items-center bg-opacity-50 text-white px-3 rounded">
-            <h1 class="font-slabo  text-center text-sm">COLOUR CATALOGUE</h1>
-            <p class="text-5xl font-semibold text-center mt-3"> <span> See 1800+colours</span><br />
-                <span> for wall inspirations</span>
-            </p>
+<x-carousel :sliders="$sliders"/>
 
-        </div> --}}
-    </div>
-    <div class="mx-0 lg:mx-20 my-0 lg:my-20">
+    <div class="mx-0 lg:mx-20 my-0 lg:my-10">
         <div>
          <p class="text-slate-500">
-               <span >Painting your home is exciting, but choosing the right colours, products, and house 
+               Painting your home is exciting, but choosing the right colours, products, and house 
                 painters while ensuring your family’s safety can be a huge task. That's where we come in 
                 with our aim to make home painting a safe and great experience! With Sargo Paints Safe 
-                Painting Services, be rest assured from all your painting worries.</span><br>
-            <span>Start your consultation with Sargo Paints Safe Painting Services and let us guide you through all the questions you may have.</span>
-        </p>
+                Painting Services, be rest assured from all your painting worries.
+            </p>
+            <p class="text-slate-500 mt-5">Start your consultation with Sargo Paints Safe Painting Services and let us guide you 
+                through all the questions you may have.</p>
         </div>
         <h1 class=" text-4xl text-neutral-700 font-bold mt-10">
             Our Services

@@ -19,8 +19,8 @@ class FrontendController extends Controller
     public function index()
     {
         session()->flash('showPopup', true);
-
-        return view('frontend.index');
+        $sliders = Slider::where('type', 'index')->get();
+        return view('frontend.index', compact('sliders'));
     }
 
     public function productCategory(ProductCategory $productCategory)
@@ -34,8 +34,10 @@ class FrontendController extends Controller
     public function service($value)
     {
         $whyChooses = WhyChoose::all();
+        $sliders = Slider::where('type', 'service')->get();
+
       $services = Service::where('type', $value)->get();
-      return view('frontend.service.serviceList', compact('services','whyChooses'));
+      return view('frontend.service.serviceList', compact('services','whyChooses','sliders'));
     }
 
     public function color()

@@ -17,12 +17,21 @@ class Service extends Model
         'title',
         'type',
         'image',
+        'bg_image',
         'description',
         'slug',
         'position',
+        
     ];
 
     protected function image(): Attribute
+    {
+        return Attribute::make(
+            get: fn(?string $value) => $value ? Storage::disk('public')->url($value) : null,
+            set: fn($value) => $value ? $value->store('services', 'public') : null,
+        );
+    }
+    protected function bgImage(): Attribute
     {
         return Attribute::make(
             get: fn(?string $value) => $value ? Storage::disk('public')->url($value) : null,

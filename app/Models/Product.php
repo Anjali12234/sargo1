@@ -20,9 +20,18 @@ class Product extends Model
         'slug',
         'description',
         'position',
+        'bg_image',
+        'bg_title',
     ];
 
     protected function image(): Attribute
+    {
+        return Attribute::make(
+            get: fn(?string $value) => $value ? Storage::disk('public')->url($value) : null,
+            set: fn($value) => $value ? $value->store('products', 'public') : null,
+        );
+    }
+    protected function bgImage(): Attribute
     {
         return Attribute::make(
             get: fn(?string $value) => $value ? Storage::disk('public')->url($value) : null,
