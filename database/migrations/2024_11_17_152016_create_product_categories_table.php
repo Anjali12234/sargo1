@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('type');
-            $table->string('image');
-            $table->longText('description');
+            $table->string('image')->nullable();
+            $table->longText('description')->nullable();
             $table->string('slug')->nullable();
             $table->string('position')->nullable();
             $table->softDeletes();

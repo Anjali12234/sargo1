@@ -2,18 +2,27 @@
 
 @section('mainContainer')
     <div class="relative w-full sm:w-auto">
-        <img src="https://static.asianpaints.com/content/dam/asian_paints/products/listing-page/interior-walls-interior-plain-finishes-spotlight-asian-paints.jpg"
+        <img src="{{asset("assets/frontend/staticimage/service.jpg")}}"
             alt="Ad Image 1" class="w-full h-96">
-        <div class="absolute inset-0 flex flex-col mt-10 items-center bg-opacity-50 text-white px-3 rounded">
+        {{-- <div class="absolute inset-0 flex flex-col mt-10 items-center bg-opacity-50 text-white px-3 rounded">
             <h1 class="font-slabo  text-center text-sm">COLOUR CATALOGUE</h1>
             <p class="text-5xl font-semibold text-center mt-3"> <span> See 1800+colours</span><br />
                 <span> for wall inspirations</span>
             </p>
 
-        </div>
+        </div> --}}
     </div>
     <div class="mx-0 lg:mx-20 my-0 lg:my-20">
-        <h1 class=" text-4xl text-neutral-700 font-bold">
+        <div>
+         <p class="text-slate-500">
+               <span >Painting your home is exciting, but choosing the right colours, products, and house 
+                painters while ensuring your family’s safety can be a huge task. That's where we come in 
+                with our aim to make home painting a safe and great experience! With Sargo Paints Safe 
+                Painting Services, be rest assured from all your painting worries.</span><br>
+            <span>Start your consultation with Sargo Paints Safe Painting Services and let us guide you through all the questions you may have.</span>
+        </p>
+        </div>
+        <h1 class=" text-4xl text-neutral-700 font-bold mt-10">
             Our Services
         </h1>
         <div class="grid grid-cols-4 mt-10 gap-10">

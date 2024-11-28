@@ -128,27 +128,54 @@
                     <!-- Thumbnails -->
                     <div class="flex space-x-2 mt-4 overflow-x-auto pb-2">
                         <div class="thumbnail" onclick="setSlide(0)">
-                            <img src="{{ asset('assets/frontend/staticimage/banner1.jpg') }}" alt="Thumbnail 1"
+                            <img src="{{ asset('assets/frontend/staticimage/blue.png') }}" alt="Thumbnail 1"
                                 class="w-32 h-24 object-cover cursor-pointer rounded border-2 border-transparent active-thumbnail">
                             <p class="font-bold text-sm text-neutral-700">Tranquill Bl..</p>
-                            <p class="text-base font-semibold">9856</p>
+                            <p class="text-base font-semibold">9215</p>
                         </div>
                         <div class="thumbnail" onclick="setSlide(1)">
-                            <img src="{{ asset('assets/frontend/staticimage/banner2.jpg') }}" alt="Thumbnail 2"
+                            <img src="{{ asset('assets/frontend/staticimage/red.png') }}" alt="Thumbnail 2"
                                 class="w-32 h-24 object-cover cursor-pointer rounded border-2 border-transparent">
                             <p class="font-bold text-sm text-neutral-700">Velvet Dre..</p>
-                            <p class="text-base font-semibold">9856</p>
+                            <p class="text-base font-semibold">8117</p>
                         </div>
                         <div class="thumbnail hidden lg:block" onclick="setSlide(2)">
-                            <img src="{{ asset('assets/frontend/staticimage/banner3.jpg') }}" alt="Thumbnail 3"
+                            <img src="{{ asset('assets/frontend/staticimage/green.png') }}" alt="Thumbnail 3"
                                 class="w-32 h-24 object-cover cursor-pointer rounded border-2 border-transparent">
                             <p class="font-bold text-sm text-neutral-700">Lasting Spre..</p>
-                            <p class="text-base font-semibold">9856</p>
+                            <p class="text-base font-semibold">9350</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="overflow-hidden">
+            <img src="{{ asset('assets/frontend/staticimage/ad.png') }}" alt="Ad Image"
+                class="transition-transform duration-300 ease-in-out transform hover:scale-110">
+        </div>
+        <div class="bg-neutral-200 md:bg-neutral-200 sm:bg-black justify-center">
+            <div class="mt-10 md:mt-28 ">
+                <h1
+                    class="pl-8 md:px-32 font-slabo text-justify md:text-center font-semibold text-sm md:text-base text-slate-700 hover:text-slate-900">
+                    ASIAN
+                    PAINTS SAFE PAINTING SERVICE</h1>
+                <p
+                    class="text-2xl md:text-4xl font-semibold pl-8 md:px-32 mt-2 text-justify md:text-center text-slate-700 hover:text-slate-800 font-slabo">
+                    <span>Get the right assistance </span><br />
+                    <span>for all your painting </span><br />
+                    <span>needs </span>
+                </p>
+                <div class="pl-8 md:px-32 text-justify md:text-center mt-5">
+                    <a href="#"
+                        class="inline-block px-6 py-2 mb-5 text-white bg-red-500 hover:bg-red-600 font-semibold text-lg rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        CLICK FOR FREE CONSULTATION
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
