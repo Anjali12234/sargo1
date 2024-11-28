@@ -12,15 +12,16 @@
 
         </div> --}}
     </div>
-    <div class="mx-0 lg:mx-20 my-0 lg:my-20">
+    <div class="mx-0 lg:mx-20 my-0 lg:my-10">
         <div>
          <p class="text-slate-500">
-               <span >Painting your home is exciting, but choosing the right colours, products, and house 
+               Painting your home is exciting, but choosing the right colours, products, and house 
                 painters while ensuring your family’s safety can be a huge task. That's where we come in 
                 with our aim to make home painting a safe and great experience! With Sargo Paints Safe 
-                Painting Services, be rest assured from all your painting worries.</span><br>
-            <span>Start your consultation with Sargo Paints Safe Painting Services and let us guide you through all the questions you may have.</span>
-        </p>
+                Painting Services, be rest assured from all your painting worries.
+            </p>
+            <p class="text-slate-500 mt-5">Start your consultation with Sargo Paints Safe Painting Services and let us guide you 
+                through all the questions you may have.</p>
         </div>
         <h1 class=" text-4xl text-neutral-700 font-bold mt-10">
             Our Services
