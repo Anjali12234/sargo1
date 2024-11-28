@@ -5,9 +5,9 @@
         <img src="https://static.asianpaints.com/content/dam/asian_paints/products/listing-page/interior-walls-interior-plain-finishes-spotlight-asian-paints.jpg"
             alt="Ad Image 1" class="w-full h-96">
         <div class="absolute inset-0 flex flex-col mt-10 items-center bg-opacity-50 text-white px-3 rounded">
-            <h1 class="font-slabo  text-center text-sm">COLOUR CATALOGUE</h1>
-            <p class="text-5xl font-semibold text-center mt-3"> <span> See 1800+colours</span><br />
-                <span> for wall inspirations</span>
+            <h1 class="font-slabo  text-center text-sm">INTERIOR PLAIN FINISHES</h1>
+            <p class="text-5xl font-semibold text-center mt-3"> <span> Smooth Finishes For</span><br />
+                <span> Beautiful Homes</span>
             </p>
 
         </div>
@@ -73,11 +73,11 @@
 
     <div class="flex flex-wrap mt-28 gap-10 justify-center items-center">
         <div class="relative w-full sm:w-auto">
-            <img src="{{ asset('assets/frontend/staticimage/ad1.jpg') }}" alt="Ad Image 1" class="w-full h-auto">
+            <img src="{{ asset('assets/frontend/staticimage/productimage.jpg') }}" alt="Ad Image 1" class="w-full h-auto">
             <div class="absolute bottom-2 bg-opacity-50 text-white px-3 py-1 rounded">
-                <h1 class="font-slabo font-bold">COLOUR CATALOGUE</h1>
-                <p class="text-4xl font-bold pr-32"> <span> See 1800+colours</span><br />
-                    <span> for wall inspirations</span>
+                <h1 class="font-slabo font-bold">EXTERIOR WALL TEXTURE</h1>
+                <p class="text-4xl font-bold pr-32"> <span>Textured finishes</span><br />
+                    <span> that redefine luxury</span>
                 </p>
                 <a href="" class="mt-2">Explore now</a>
                 <hr class="border-t-2 border-purple-600 w-1/5 mt-1 hover:border-purple-900">
@@ -85,11 +85,11 @@
         </div>
 
         <div class="relative w-full sm:w-auto">
-            <img src="{{ asset('assets/frontend/staticimage/ad1.jpg') }}" alt="Ad Image 2" class="w-full h-auto">
+            <img src="{{ asset('assets/frontend/staticimage/productimage1.png') }}" alt="Ad Image 2" class="w-full h-auto">
             <div class="absolute bottom-2 bg-opacity-50 text-white px-3 py-1 rounded">
-                <h1 class="font-slabo font-bold">COLOUR CATALOGUE</h1>
-                <p class="text-4xl font-bold pr-32"> <span> See 1800+colours</span><br />
-                    <span> for wall inspirations</span>
+                <h1 class="font-slabo font-bold">SMARTCARE WATERPROOFING RANGE</h1>
+                <p class="text-4xl font-bold pr-32"> <span>Say goodbye to</span><br />
+                    <span> all waterproofing problems</span>
                 </p>
                 <a href="" class="mt-2">Explore now</a>
                 <hr class="border-t-2 border-purple-600 w-1/5 mt-1 hover:border-purple-900">
@@ -97,233 +97,7 @@
         </div>
     </div>
 
-
-
-
-    {{-- <div>
-        <div class="h-90">
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ut eos ex nobis tenetur omnis maxime in
-                illo est blanditiis temporibus iste repudiandae sequi beatae corrupti, amet distinctio explicabo! Minus.
-            </p>
-        </div>
-    </div> --}}
+  
 @endsection
 
 </html>

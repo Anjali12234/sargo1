@@ -151,6 +151,33 @@
         </section>
     </div>
 
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="overflow-hidden">
+            <img src="{{ asset('assets/frontend/staticimage/ad.png') }}" alt="Ad Image"
+                class="transition-transform duration-300 ease-in-out transform hover:scale-110">
+        </div>
+        <div class="bg-neutral-200 md:bg-neutral-200 sm:bg-black justify-center">
+            <div class="mt-10 md:mt-28 ">
+                <h1
+                    class="pl-8 md:px-32 font-slabo text-justify md:text-center font-semibold text-sm md:text-base text-slate-700 hover:text-slate-900">
+                    ASIAN
+                    PAINTS SAFE PAINTING SERVICE</h1>
+                <p
+                    class="text-2xl md:text-4xl font-semibold pl-8 md:px-32 mt-2 text-justify md:text-center text-slate-700 hover:text-slate-800 font-slabo">
+                    <span>Get the right assistance </span><br />
+                    <span>for all your painting </span><br />
+                    <span>needs </span>
+                </p>
+                <div class="pl-8 md:px-32 text-justify md:text-center mt-5">
+                    <a href="#"
+                        class="inline-block px-6 py-2 mb-5 text-white bg-red-500 hover:bg-red-600 font-semibold text-lg rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                        CLICK FOR FREE CONSULTATION
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         const carouselItems = document.querySelectorAll('.carousel-item');
         const thumbnails = document.querySelectorAll('.thumbnail img');

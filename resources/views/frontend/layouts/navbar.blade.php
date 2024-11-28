@@ -85,7 +85,7 @@
                                             @foreach (\App\Enums\ProductCategoryEnum::cases() as $case)
                                                 <div
                                                     class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] [--is-collapse:true] md:[--is-collapse:false] relative">
-                                                    <a href="" id="hs-header-base-dropdown-sub" type="button"
+                                                    <button id="hs-header-base-dropdown-sub" type="button"
                                                         class="hs-dropdown-toggle w-full flex justify-between items-center text-sm text-gray-800 rounded-lg p-2 md:px-3 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
                                                         {{ $case->label() }}
                                                         <svg class="hs-dropdown-open:-rotate-180 md:hs-dropdown-open:-rotate-90 md:-rotate-90 duration-300 ms-auto shrink-0 size-4"
@@ -95,7 +95,7 @@
                                                             stroke-linecap="round" stroke-linejoin="round">
                                                             <path d="m6 9 6 6 6-6" />
                                                         </svg>
-                                                    </a>
+                                                    </button>
 
                                                     <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 relative md:w-48 hidden z-10 md:mt-2 md:!mx-[10px] md:top-0 md:end-full ps-7 md:ps-0 md:bg-white md:rounded-lg md:shadow-md dark:bg-neutral-800 dark:divide-neutral-700 before:hidden md:before:block before:absolute before:-end-5 before:top-0 before:h-full before:w-5 md:after:hidden after:absolute after:top-1 after:start-[18px] after:w-0.5 after:h-[calc(100%-0.25rem)] after:bg-gray-100 dark:md:bg-neutral-800 dark:after:bg-neutral-700"
                                                         role="menu" aria-orientation="vertical"
