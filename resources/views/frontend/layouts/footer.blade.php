@@ -1,10 +1,10 @@
 <!-- ========== FOOTER ========== -->
-<footer class="mt-10 bg-slate-100 w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+<footer class="mt-10 bg-slate-100 w-full  py-10 px-4 sm:px-6 lg:px-8">
     <!-- Grid -->
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-10 mx-8">
         <div class="col-span-full hidden lg:col-span-1 lg:block">
             <a class="flex-none font-semibold text-xl text-black focus:outline-none focus:opacity-80 dark:text-white"
-                href="#" aria-label="Brand">Sargo</a>
+                href="{{route('welcome')}}" aria-label="Brand">{{setting()?->name}}</a>
             <p class="mt-3 text-xs sm:text-sm text-gray-600 dark:text-neutral-400">
                 © 2024 Brilliant IT Solution.
             </p>

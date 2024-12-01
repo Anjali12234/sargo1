@@ -66,4 +66,9 @@ class Product extends Model
     {
         return $this->hasMany(ProductKeyFeature::class);
     }
+
+    public function productSteps()
+    {
+        return $this->hasMany(ProductStep::class);
+    }
 }

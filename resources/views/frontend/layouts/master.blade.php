@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
     <title>Sargo Paints</title>
-    
+
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
 </head>
@@ -15,11 +15,11 @@
 
     @include('sweetalert::alert')
 
-@include('frontend.layouts.header')
-   @include('frontend.layouts.navbar')
+    @include('frontend.layouts.header')
+    @include('frontend.layouts.navbar')
 
 
-   @yield('mainContainer')
+    @yield('mainContainer')
 
     @include('frontend.layouts.footer')
 

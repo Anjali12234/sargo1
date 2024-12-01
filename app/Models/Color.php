@@ -52,7 +52,7 @@ class Color extends Model
     }   
     public function files()
     {
-        return $this->morphMany(File::class, 'model');    
+        return $this->morphMany(File::class, 'model');
     }
 
     public function colorCategory()

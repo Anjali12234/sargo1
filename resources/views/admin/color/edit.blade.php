@@ -147,7 +147,7 @@
                 
                 @foreach ($color->files as $file)
                     <div class="flex p-9">
-                        @dd($file);
+                     
                         <img src="{{ $file->file_url }}" height="200" width="200" alt="">
                         <form action="{{ route('file.destroy', $file) }}" method="post" style="display: inline;">
                             @csrf

@@ -25,7 +25,8 @@ class FrontendController extends Controller
 
     public function productCategory(ProductCategory $productCategory)
     {
-        return view('frontend.product.productList', compact('productCategory'));
+        $sliders = Slider::where('type', 'product')->get();
+        return view('frontend.product.productList', compact('productCategory','sliders'));
     }
     public function productDetail(Product $product)
     {

@@ -8,6 +8,7 @@ use App\Http\Requests\Color\UpdateColorRequest;
 use App\Models\Color;
 use App\Models\ColorCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
 
@@ -22,17 +23,18 @@ class ColorController extends Controller
     
     public function store(StoreColorRequest $request, Color $color)
     {
-        if ($request->hasFile('files')) {
-            foreach ($request->file('files') as $file) {
+        
+        DB::transaction(function () use ($request) {
+            $color = Color::create($request->validated());
+            foreach ($request->validated(['files']) as $file) {
                 $color->files()->create([
                     'file_name' => $file->getClientOriginalName(),
-                    'file' => $file->store('$colors/' . Str::slug($request->input('name'), '_'), 'public'),
+                    'file' => $file->store('colors/' . STR::slug($request->input('name'), '_'), 'public'),
                     'size' => $file->getSize(),
                     'extension' => $file->getClientOriginalExtension()
                 ]);
             }
-        }
-        Color::create($request->validated());
+        });
         Alert::success('Color added successfully');
         return back();
     }
