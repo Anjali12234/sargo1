@@ -2,27 +2,36 @@
 
 @section('mainContainer')
 
-    <x-carousel :sliders="$sliders"/>
+    <x-carousel :sliders="$sliders" />
     {{-- popup --}}
 
     <div class="relative">
-     
+
         <!-- Pop-up Modal -->
         @if (session('showPopup'))
             <div id="popup" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
                 <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
                     <h2 class="text-xl font-bold text-gray-800 mb-4">Contact Us</h2>
                     <p class="text-gray-600 mb-4">Please fill out the form below, and we’ll get back to you shortly.</p>
-
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <!-- Form -->
-                    <form action="{{ route('enquiry') }}" method="POST">
+                    <form id="popupForm" action="{{ route('enquiry') }}" method="POST">
                         @csrf
+
                         <!-- Name -->
                         <div class="mb-4">
-                            <label for="full-name" class="block text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" name="full-name" id="full-name" required
+                            <label for="full_name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" name="full_name" id="full_name" required
                                 class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                            @error('full-name')
+                            @error('full_name')
                                 <span class="text-sm text-red-600">{{ $message }}</span>
                             @enderror
                         </div>
@@ -87,10 +96,6 @@
             </div>
         @endif
     </div>
-    {{-- endpopup --}}
-
-
-    <!-- End Slider -->
     <div class="mx-0 lg:mx-20 my-0 lg:my-20">
         <section>
             <div class="text-center mx-8 lg:mx-0 my-6 lg:my-0">
@@ -198,10 +203,45 @@
             thumbnails[index].classList.replace('border-transparent', 'border-gray-500');
         }
     </script>
-   <script>
-    function closePopup() {
-        const popup = document.getElementById('popup');
-        popup.style.display = 'none';
-    }
-</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#popupForm').on('submit', function (e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: $(this).attr('action'),
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        alert('Form submitted successfully!');
+                        $('#popup').hide();
+                        $('#popupForm')[0].reset(); // Clear form fields
+                    },
+                    error: function (xhr) {
+                        if (xhr.responseJSON && xhr.responseJSON.errors) {
+                            let errors = xhr.responseJSON.errors;
+                            let errorMessages = '';
+                            for (let field in errors) {
+                                errorMessages += errors[field][0] + '\n';
+                            }
+                            alert('Errors:\n' + errorMessages);
+                        } else {
+                            alert('An error occurred. Please try again.');
+                        }
+                    }
+                });
+            });
+
+            // Close popup
+            function closePopup() {
+                $('#popup').hide();
+            }
+
+            // Bind close button to closePopup function
+            $('button[onclick="closePopup()"]').on('click', function () {
+                closePopup();
+            });
+        });
+    </script>
 @endsection
