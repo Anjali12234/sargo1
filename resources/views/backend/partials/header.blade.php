@@ -127,7 +127,7 @@
                     data-toggle="dropdown"
                 >
                     <span class="user-icon" >
-                        <img class="" src="{{setting()?->logo1}}" height="100" width="100" alt="" />
+                        <img class="" src="{{systemSetting()?->logo1}}" height="100" width="100" alt="" />
 
                         {{-- <img src="{{ asset('assets/backend/vendors/images/photo1.jpg')}}" alt="" /> --}}
                     </span>
