@@ -12,17 +12,28 @@
                     <div class="space-y-8">
                         <!-- Products Section -->
                         @if (!$products->isEmpty())
-                            <div>
-                                <h2 class="text-lg font-semibold text-blue-600 mb-2">Products</h2>
-                                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="mt-8">
+                                <h2 class="text-xl font-semibold text-blue-600 mb-4">Products</h2>
+                                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                     @foreach ($products as $product)
-                                        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                                            <img src="{{ $product->image }}" 
-                                                 alt="{{ $product->title }}" 
-                                                 class="w-full h-48 object-cover">
-                                            <div class="p-4">
-                                                <h3 class="text-lg font-bold mb-2">{{ $product->title }}</h3>
-                                                <p class="text-sm text-gray-700">{{ $product->description }}</p>
+                                        <div
+                                            class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+                                            <div class="flex items-center justify-center">
+                                                <a href="{{ route('productDetail', $product) }}">
+                                                    <img src="{{ $product->image_url }}" alt="{{ $product->title }}"
+                                                        class="w-44 h-56 object-cover">
+                                                </a>
+                                            </div>
+
+                                            <div class="p-6 text-center">
+                                                <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ $product->title }}
+                                                </h3>
+                                                <p class="text-sm text-gray-600 mb-4">
+                                                    {{ Str::limit($product->description, 100, '...') }}</p>
+                                                <a href="{{ route('productDetail', $product) }}"
+                                                    class="inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                                                    View Details
+                                                </a>
                                             </div>
                                         </div>
                                     @endforeach
@@ -30,19 +41,37 @@
                             </div>
                         @endif
 
+
                         <!-- Services Section -->
                         @if (!$services->isEmpty())
-                            <div>
-                                <h2 class="text-lg font-semibold text-green-600 mb-2">Services</h2>
-                                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="mt-8">
+                                <h2 class="text-xl font-semibold text-blue-600 mb-4">Products</h2>
+                                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                     @foreach ($services as $service)
-                                        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                                            <img src="{{$service->image }}" 
-                                                 alt="{{ $service->title }}" 
-                                                 class="w-full h-48 object-cover">
-                                            <div class="p-4">
-                                                <h3 class="text-lg font-bold mb-2">{{ $service->title }}</h3>
-                                                <p class="text-sm text-gray-700">{{ $service->description }}</p>
+                                        
+                                        <div
+                                            class="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
+                                            <div class="">
+                                                <a
+                                                    href="
+                                                {{-- {{ route('productDetail', $product) }} --}}
+                                                 ">
+                                                    <img src="{{ $service->image }}" alt="{{ $service->title }}"
+                                                        class="w-full h-56 object-cover">
+                                                </a>
+                                            </div>
+
+                                            <div class="p-6 text-center">
+                                                <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ $service->title }}
+                                                </h3>
+                                                <p class="text-sm text-gray-600 mb-4">
+                                                    {!! Str::limit($service->description, 100, '...') !!}</p>
+                                                <a href="
+                                                {{-- {{ route('productDetail', $product) }} --}}
+                                                 "
+                                                    class="inline-block bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
+                                                    View Details
+                                                </a>
                                             </div>
                                         </div>
                                     @endforeach
@@ -57,12 +86,11 @@
                                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                     @foreach ($colors as $color)
                                         <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                                            <img src="{{$color->color_code_image }}" 
-                                                 alt="{{ $color->name }}" 
-                                                 class="w-full h-48 object-cover">
+                                            <img src="{{ $color->color_code_image }}" alt="{{ $color->name }}"
+                                                class="w-full h-48 object-cover">
                                             <div class="p-4">
                                                 <h3 class="text-lg font-bold mb-2">{{ $color->name }}</h3>
-                                                <p class="text-sm text-gray-700">{{ $color->description }}</p>
+                                                <p class="text-sm text-gray-700">{!! $color->description !!}</p>
                                             </div>
                                         </div>
                                     @endforeach

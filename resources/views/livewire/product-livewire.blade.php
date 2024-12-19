@@ -1,4 +1,13 @@
 <form wire:submit.prevent="save">
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     <div class="form-group">
         <label for="title">Title</label>
         <input id="title" type="text" class="form-control" wire:model="title">
@@ -28,6 +37,7 @@
     </div>
 
     <div class="form-group">
+        {{-- <img src="{{$product->image}}" alt=""> --}}
         <label for="image">Image</label>
         <input id="image" type="file" class="form-control" wire:model="image">
         @error('image')

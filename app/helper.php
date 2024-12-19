@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\About;
 use App\Models\ProductCategory;
 use App\Models\Slider;
 use App\Models\SystemSetting;
@@ -19,14 +20,7 @@ if (!function_exists('sliders')) {
       
     }
 }
-// if (!function_exists('setting')) {
-//     function setting()
-//     {
-//         return Cache::rememberForever('setting', function () {
-//             return SystemSetting::latest()->first();
-//         });
-//     }
-// }
+
 
 
 if (!function_exists('systemSetting')) {
@@ -37,3 +31,11 @@ if (!function_exists('systemSetting')) {
         });
     }
 }
+// if (!function_exists('about')) {
+//     function about()
+//     {
+//         return Cache::rememberForever('about', function () {
+//             return About::latest()->first();
+//         });
+//     }
+// }

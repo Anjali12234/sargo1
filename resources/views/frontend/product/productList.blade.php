@@ -29,7 +29,7 @@
                 </a> --}}
                 <div class="flex items-center justify-center ">
                     <a href="#" class="relative">
-                        <img class="w-48 h-56 object-cover" src="{{ $product->image }}"
+                        <img class="w-48 h-56 object-cover" src="{{ $product->image_url }}"
                             alt="{{ $product->title }}">
                     </a>
                 </div>

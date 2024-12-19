@@ -48,7 +48,7 @@
                         @foreach ($products as $key => $product)
                             <tr>
                                 <td class="table-plus">{{ $loop->iteration }}</td>
-                                <td><img src="{{ $product?->image }}" height="150" width="100" alt="">
+                                <td><img src="{{ $product?->image_url }}" height="150" width="100" alt="">
                                 </td>
                                 <td>{{ $product->title }}</td>
                                 <td>

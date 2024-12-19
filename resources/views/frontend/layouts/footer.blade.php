@@ -24,7 +24,7 @@
             <h4 class="text-sm font-semibold text-gray-900 uppercase dark:text-neutral-100">About</h4>
             <ul class="mt-3 space-y-2">
                 <li>
-                    <a href="#" class="text-gray-600 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200">
+                    <a href="{{route('about')}}" class="text-gray-600 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200">
                         About Us
                     </a>
                 </li>

@@ -25,11 +25,16 @@ class EnquiryController extends Controller
         return view('admin.enquiry.show',compact('enquiry'));
     }
 
+    public function updateStatus(Enquiry $enquiry)
+    {
+        $enquiry->update([
+            'status' => !$enquiry->status,
+        ]);
+        alert('Enquiry updated successfully');
+        return back();
+    }
 
-
-    /**
-     * Remove the specified resource from storage.
-     */
+   
     public function destroy(Enquiry $enquiry)
     {
         $enquiry->delete();

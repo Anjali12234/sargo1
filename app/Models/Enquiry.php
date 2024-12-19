@@ -17,6 +17,7 @@ class Enquiry extends Model
         'phone_number',
         'message',
         'terms',
+        'status',
     ];
     protected $casts = [
         'terms' => 'boolean',

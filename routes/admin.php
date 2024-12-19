@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ColorCategoryController;
 use App\Http\Controllers\Admin\ColorController;
 use App\Http\Controllers\Admin\EnquiryController;
@@ -24,8 +25,11 @@ Route::resource('service', ServiceController::class);
 Route::resource('color', ColorController::class);
 Route::resource('colorCategory', ColorCategoryController::class);
 Route::resource('enquiry', EnquiryController::class);
+Route::put('enquiry/{enquiry}/updateStatus', [EnquiryController::class, 'updateStatus'])->name('enquiry.updateStatus');
+
 Route::resource('whyChoose', WhyChooseController::class);
 Route::resource('systemSetting', SystemSettingController::class);
+Route::resource('about', AboutController::class);
 
 Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

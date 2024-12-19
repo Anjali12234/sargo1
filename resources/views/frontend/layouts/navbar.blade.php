@@ -1,8 +1,10 @@
     <!-- ========== HEADER ========== -->
     <header
-        class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full h-20 bg-white border-b border-gray-200 dark:bg-neutral-800 dark:border-neutral-700 sticky top-0">
+        class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full h-20 bg-white border-b border-gray-200
+         dark:bg-neutral-800 dark:border-neutral-700 sticky top-0">
         <nav
-            class="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-0 md:py-8 px-4 sm:px-6 lg:px-8">
+            class="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-0
+             md:py-8 px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center gap-x-1">
                 <div class='flex items-center gap-4 px-3 md:px-10'>
                     <a href="{{route('welcome')}}">
@@ -291,7 +293,7 @@
                                             dark:text-neutral-400 dark:placeholder-neutral-500 
                                             dark:focus:ring-neutral-600" name="query" 
                                             type="text" role="combobox" aria-expanded="false"
-                                            placeholder="Search or type a command" value="{{ request('query') }}"
+                                            placeholder="Search.." value="{{ request('query') }}"
                                             data-hs-combo-box-input="">
                                         </form>
                                     </div>
