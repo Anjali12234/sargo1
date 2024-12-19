@@ -19,10 +19,20 @@ if (!function_exists('sliders')) {
       
     }
 }
-if (!function_exists('setting')) {
-    function setting()
+// if (!function_exists('setting')) {
+//     function setting()
+//     {
+//         return Cache::rememberForever('setting', function () {
+//             return SystemSetting::latest()->first();
+//         });
+//     }
+// }
+
+
+if (!function_exists('systemSetting')) {
+    function systemSetting()
     {
-        return Cache::rememberForever('setting', function () {
+        return Cache::rememberForever('systemSetting', function () {
             return SystemSetting::latest()->first();
         });
     }

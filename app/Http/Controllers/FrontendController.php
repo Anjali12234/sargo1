@@ -46,6 +46,10 @@ class FrontendController extends Controller
         $colorCategories = ColorCategory::all();
         return view('frontend.color.color',compact('colorCategories'));
     }
+    public function contact()
+    {
+        return view('frontend.contact');
+    }
 
     public function colorDetail(Color $color)
     {

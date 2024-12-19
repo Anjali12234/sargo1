@@ -13,7 +13,7 @@ class SystemSettingController extends Controller
 {
     public function index()
     {
-    $systemSetting = setting();
+    $systemSetting = systemSetting();
         return view('admin.setting.index',compact('systemSetting'));
     }
 

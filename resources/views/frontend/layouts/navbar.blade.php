@@ -6,7 +6,7 @@
             <div class="flex justify-between items-center gap-x-1">
                 <div class='flex items-center gap-4 px-3 md:px-10'>
                     <a href="{{route('welcome')}}">
-                        <img src="{{setting()?->logo1}}" alt="logo" class='w-44 h-24' />
+                        <img src="{{systemSetting()?->logo1}}" alt="logo" class='w-44 h-24' />
                     </a>
         
                 </div>
