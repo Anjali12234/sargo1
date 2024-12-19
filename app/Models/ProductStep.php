@@ -21,12 +21,24 @@ class ProductStep extends Model
         'coat'
     ];
 
-    protected function image(): Attribute
+    // protected function image(): Attribute
+    // {
+    //     return Attribute::make(
+    //         get: fn(?string $value) => $value ? Storage::disk('public')->url($value) : null,
+    //         set: fn($value) => $value ? $value->store('productStep', 'public') : null,
+    //     );
+    // }
+
+    public function setImageAttribute($value)
     {
-        return Attribute::make(
-            get: fn(?string $value) => $value ? Storage::disk('public')->url($value) : null,
-            set: fn($value) => $value ? $value->store('productStep', 'public') : null,
-        );
+        if (!empty($value) && !is_string($value)) {
+            $this->attributes['image'] = $value->store('productSteps/image', 'public');
+        }
+    }
+
+    public function getImageUrlAttribute()
+    {
+        return $this->attributes['image'] ? Storage::disk('public')->url($this->attributes['image']) : '';
     }
 
 

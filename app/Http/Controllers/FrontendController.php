@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\Enquiry\StoreEnquiryRequest;
+use App\Models\About;
 use App\Models\Color;
 use App\Models\ColorCategory;
 use App\Models\Enquiry;
@@ -49,6 +50,11 @@ class FrontendController extends Controller
     public function contact()
     {
         return view('frontend.contact');
+    }
+    public function about()
+    {
+        $abouts = About::all();
+        return view('frontend.about',compact('abouts'));
     }
 
     public function colorDetail(Color $color)

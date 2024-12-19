@@ -36,6 +36,7 @@
                             <th>Email </th>
                             <th>Phone </th>
                             <th>Message </th>
+                            <th>Status </th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -49,23 +50,34 @@
                                 <td>{{ $enquiry->phone_number }}</td>
                                 <td>{{ $enquiry->message }}</td>
                                 <td>
+
+                                    <form action="{{ route('admin.enquiry.updateStatus', $enquiry) }}" method="post"
+                                        style="display: inline">
+                                        @csrf
+                                        @method('put')
+                                        <button type="submit" style="border: none; background: none;">
+                                            <i
+                                                class="fa fa-{{ $enquiry->status == 1 ? 'toggle-on text-success' : 'toggle-off text-danger' }} fa-2x"></i>
+                                        </button>
+                                    </form>
+                                </td>
+                                <td>
                                     <div class="dropdown">
                                         <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
                                             href="#" role="button" data-toggle="dropdown">
                                             <i class="dw dw-more"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                                            <a class="dropdown-item"
-                                                href="{{ route('admin.enquiry.show', $enquiry) }}"><i
+                                            <a class="dropdown-item" href="{{ route('admin.enquiry.show', $enquiry) }}"><i
                                                     class="dw dw-view"></i>view</a>
 
-                                            <form action="{{ route('admin.enquiry.destroy', $enquiry) }}"
-                                                method="POST" style="display: inline">
+                                            <form action="{{ route('admin.enquiry.destroy', $enquiry) }}" method="POST"
+                                                style="display: inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="dropdown-item"
                                                     onclick="return confirm('Are You sure want to delete')"> <i
-                                                    class="dw dw-delete-3"></i>Delete </button>
+                                                        class="dw dw-delete-3"></i>Delete </button>
 
                                             </form>
                                         </div>

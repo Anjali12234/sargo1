@@ -24,20 +24,43 @@ class Product extends Model
         'bg_title',
     ];
 
-    protected function image(): Attribute
+    // protected function image(): Attribute
+    // {
+    //     return Attribute::make(
+    //         get: fn(?string $value) => $value ? Storage::disk('public')->url($value) : null,
+    //         set: fn($value) => $value ? $value->store('products', 'public') : null,
+    //     );
+    // }
+
+    public function setImageAttribute($value)
     {
-        return Attribute::make(
-            get: fn(?string $value) => $value ? Storage::disk('public')->url($value) : null,
-            set: fn($value) => $value ? $value->store('products', 'public') : null,
-        );
+        if (!empty($value) && !is_string($value)) {
+            $this->attributes['image'] = $value->store('products/image', 'public');
+        }
     }
-    protected function bgImage(): Attribute
+
+    public function getImageUrlAttribute()
     {
-        return Attribute::make(
-            get: fn(?string $value) => $value ? Storage::disk('public')->url($value) : null,
-            set: fn($value) => $value ? $value->store('products', 'public') : null,
-        );
+        return $this->attributes['image'] ? Storage::disk('public')->url($this->attributes['image']) : '';
     }
+    public function setBgImageAttribute($value)
+    {
+        if (!empty($value) && !is_string($value)) {
+            $this->attributes['bg_image'] = $value->store('products/bgImage', 'public');
+        }
+    }
+
+    public function getBgImageUrlAttribute()
+    {
+        return $this->attributes['bg_image'] ? Storage::disk('public')->url($this->attributes['bg_image']) : '';
+    }
+    // protected function bgImage(): Attribute
+    // {
+    //     return Attribute::make(
+    //         get: fn(?string $value) => $value ? Storage::disk('public')->url($value) : null,
+    //         set: fn($value) => $value ? $value->store('products', 'public') : null,
+    //     );
+    // }
 
     public function sluggable(): array
     {

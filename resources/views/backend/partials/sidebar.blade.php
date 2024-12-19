@@ -31,6 +31,11 @@
 
                 </li>
                 <li class="dropdown">
+                    <a href="{{route('admin.about.create')}}" class="dropdown-toggle no-arrow">
+                        <span class="micon bi bi-table"></span><span class="mtext">About</span>
+                    </a>
+                </li>
+                <li class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle">
                         <span class="micon bi bi-calendar4-week"></span><span class="mtext">Product</span>
                     </a>

@@ -2,7 +2,7 @@
 
 @section('mainContainer')
     <div class="relative w-full sm:w-auto">
-        <img src="{{ $product->bg_image }}" alt="Ad Image 1" class="w-full h-96">
+        <img src="{{ $product->bg_image_url }}" alt="Ad Image 1" class="w-full h-96">
         <div class="absolute inset-0 flex flex-col mt-20 items-center bg-opacity-50 text-white px-3 rounded">
             <h1 class="font-slabo  text-center text-base">{{ $product->bg_title }}</h1>
             <p class="text-6xl font-semibold text-center mt-3"> <span> {{ $product->title }}</span>
@@ -15,7 +15,7 @@
         <div class="flex flex-col items-center justify-center h-screen bg-gray-100 px-6">
 
             <div class="mb-6">
-                <img src="{{ $product->image }}" alt="Product" class="w-72 h-80 object-cover rounded-xl shadow-md">
+                <img src="{{ $product->image_url }}" alt="Product" class="w-72 h-80 object-cover rounded-xl shadow-md">
             </div>
 
 
@@ -64,7 +64,7 @@
                     </div>
                     <div class="flex items-center justify-center ">
                         <a href="#" class="relative">
-                            <img class="w-30 h-56 object-cover" src="{{ $productStep->image }}" alt="Step 1 Image">
+                            <img class="w-30 h-56 object-cover" src="{{ $productStep->image_url }}" alt="Step 1 Image">
                         </a>
                     </div>
 
@@ -101,7 +101,9 @@
                     Get more information about this product with these downloadable files.
                 </h1>
                 <div class="mt-6">
-                    <a href="{{ asset('assets/frontend/staticimage/royale-bling.pdf') }}" download
+                    {{-- <a href="{{ asset('assets/frontend/staticimage/royale-bling.pdf') }}" --}}
+                    <a href="#"
+                     download
                         class="inline-block px-6 py-2 bg-white text-red-600 hover:bg-red-600 hover:text-white font-semibold text-lg rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
                         PRODUCT INFORMATION SHEET<i class="ti ti-download ml-2"></i>
                     </a>

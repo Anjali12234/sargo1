@@ -14,6 +14,7 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('color', 'color')->name('color');
     Route::get('color/{color:slug}','colorDetail')->name('colorDetail');
     Route::get('contact','contact')->name('contact');
+    Route::get('about','about')->name('about');
 
     Route::get('productCategory/{productCategory:slug}', 'productCategory')->name('productCategory');
     Route::get('product/{product:slug}','productDetail')->name('productDetail');

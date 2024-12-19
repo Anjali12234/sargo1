@@ -6,20 +6,20 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-  
+   
     public function up(): void
     {
-        Schema::table('enquiries', function (Blueprint $table) {
-            $table->boolean('status')->default(0);
-
+        Schema::create('abouts', function (Blueprint $table) {
+            $table->id();
+            $table->text('title');
+            $table->text('description');
+            $table->timestamps();
         });
     }
 
    
     public function down(): void
     {
-        Schema::table('enquiries', function (Blueprint $table) {
-            $table->dropColumn('status');
-        });
+        Schema::dropIfExists('abouts');
     }
 };
