@@ -54,6 +54,7 @@
             @include('backend.partials.footer')
         </div>
     </div>
+    @livewireScripts
     @stack('script')
     <!-- js -->
     <script src="{{ asset('assets/backend/vendors/scripts/core.js') }}"></script>
@@ -76,7 +77,6 @@
                 console.error(error);
             });
     </script>
- @livewireScripts
  <script src="./node_modules/preline/dist/preline.js"></script>
 </body>
 

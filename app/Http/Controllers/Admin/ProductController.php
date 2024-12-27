@@ -8,7 +8,7 @@ use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class ProductController extends Controller
+class ProductController extends BaseController
 {
     public function index()
     {

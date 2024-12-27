@@ -12,14 +12,14 @@
             <!-- Center Section -->
             <div class="hidden md:flex items-center justify-center gap-1 ml-10">
                 <i class="ti ti-home-2 text-lg text-gray-700"></i>
-                <a href="#" class="text-gray-700 hover:text-blue-500">Nepalgunj Fultekra # 6, Nepal</a>
+                <a href="#" class="text-gray-700 hover:text-blue-500">{{systemSetting()?->address}}</a>
             </div>
 
             <!-- Right Section -->
             <div class="flex gap-3 items-center justify-center md:justify-end ml-10">
                 <div class="hidden lg:flex items-center gap-1 text-gray-700">
                     <span><i class="ti ti-phone h-6 text-lg"></i></span>
-                    <a href="tel:+977081567896" class="text-gray-700 hover:text-blue-500">+977 081-567896</a>
+                    <a href="tel:+977081567896" class="text-gray-700 hover:text-blue-500">+977 {{systemSetting()->phone_number}}</a>
                 </div>
 
                 <!-- Button -->

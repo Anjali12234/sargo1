@@ -7,10 +7,10 @@
              md:py-8 px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center gap-x-1">
                 <div class='flex items-center gap-4 px-3 md:px-10'>
-                    <a href="{{route('welcome')}}">
-                        <img src="{{systemSetting()?->logo1}}" alt="logo" class='w-44 h-24' />
+                    <a href="{{ route('welcome') }}">
+                        <img src="{{ systemSetting()?->logo1 }}" alt="logo" class='w-44 h-24' />
                     </a>
-        
+
                 </div>
 
                 <!-- Collapse Button -->
@@ -51,8 +51,103 @@
                         <div class="grow">
                             <div class="flex flex-col md:flex-row md:justify-center md:items-center gap-0.5 md:gap-1">
 
-                                <!-- Dropdown -->
-                                <div
+                                @foreach (menus() as $menu)
+                                    <div
+                                        class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true]
+                                    md:[--is-collapse:false] ">
+                                        <a href="{{ App\Helpers::getFrontUrl($menu) }}" id="hs-header-base-dropdown"
+                                            type="button"
+                                            class="hs-dropdown-toggle w-full p-2 flex items-center text-lg font-semibold text-gray-800 hover:bg-gray-100
+                                    rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700
+                                    dark:focus:bg-neutral-700"
+                                            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                                            <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="m3 10 2.5-2.5L3 5" />
+                                                <path d="m3 19 2.5-2.5L3 14" />
+                                                <path d="M10 6h11" />
+                                                <path d="M10 12h11" />
+                                                <path d="M10 18h11" />
+                                            </svg>
+                                            {{ $menu->title }}
+                                            @if ($menu->children->isNotEmpty())
+                                                <svg class="hs-dropdown-open:rotate-180 duration-300 shrink-0 size-4 ms-auto md:ms-1"
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="m6 9 6 6 6-6" />
+                                                </svg>
+                                            @endif
+                                        </a>
+
+                                        @if ($menu->children->isNotEmpty())
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 relative w-full md:w-52 hidden z-10 top-full ps-7 md:ps-0 md:bg-white md:rounded-lg md:shadow-md before:absolute before:-top-4 before:start-0 before:w-full before:h-5 md:after:hidden after:absolute after:top-1 after:start-[18px] after:w-0.5 after:h-[calc(100%-0.25rem)] after:bg-gray-100 dark:md:bg-neutral-800 dark:after:bg-neutral-700"
+                                                role="menu" aria-orientation="vertical"
+                                                aria-labelledby="hs-header-base-dropdown">
+                                                <div class="py-1 md:px-1 space-y-0.5">
+                                                    @foreach ($menu->children as $menu)
+                                                        <div
+                                                            class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] [--is-collapse:true] md:[--is-collapse:false] relative">
+                                                            @if ($menu->children->isNotEmpty())
+                                                                <a href="#" id="hs-header-base-dropdown-sub"
+                                                                    type="button"
+                                                                    class="hs-dropdown-toggle w-full flex justify-between items-center text-sm text-gray-800 rounded-lg p-2 md:px-3 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
+                                                                    {{ $menu->title }}
+                                                                    @if ($menu->children->isNotEmpty())
+                                                                    <svg class="hs-dropdown-open:-rotate-180 md:hs-dropdown-open:-rotate-90 md:-rotate-90 duration-300 ms-auto shrink-0 size-4"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24"
+                                                                        viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round">
+                                                                        <path d="m6 9 6 6 6-6" />
+                                                                    </svg>
+                                                                    @endif
+                                                                </a>
+                                                            @else
+                                                                <a href="{{ App\Helpers::getFrontUrl($menu) }}"
+                                                                    id="hs-header-base-dropdown-sub" type="button"
+                                                                    class="hs-dropdown-toggle w-full flex justify-between items-center text-sm text-gray-800 rounded-lg p-2 md:px-3 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
+                                                                    {{ $menu->title }}
+                                                                    @if ($menu->children->isNotEmpty())
+                                                                    <svg class="hs-dropdown-open:-rotate-180 md:hs-dropdown-open:-rotate-90 md:-rotate-90 duration-300 ms-auto shrink-0 size-4"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="24" height="24"
+                                                                        viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round">
+                                                                        <path d="m6 9 6 6 6-6" />
+                                                                    </svg>
+                                                                    @endif
+                                                                </a>
+                                                            @endif
+                                                            @if ($menu->children->isNotEmpty())
+                                                                <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 relative md:w-48 hidden z-10 md:mt-2 md:!mx-[10px] md:top-0 md:end-full ps-7 md:ps-0 md:bg-white md:rounded-lg md:shadow-md dark:bg-neutral-800 dark:divide-neutral-700 before:hidden md:before:block before:absolute before:-end-5 before:top-0 before:h-full before:w-5 md:after:hidden after:absolute after:top-1 after:start-[18px] after:w-0.5 after:h-[calc(100%-0.25rem)] after:bg-gray-100 dark:md:bg-neutral-800 dark:after:bg-neutral-700"
+                                                                    role="menu" aria-orientation="vertical"
+                                                                    aria-labelledby="hs-header-base-dropdown-sub">
+                                                                    <div class="p-1 space-y-1">
+                                                                        @foreach ($menu->children as $menu)
+                                                                            <a class="p-2 md:px-3 flex items-center text-sm text-gray-800 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300"
+                                                                                href="{{ App\Helpers::getFrontUrl($menu) }}">
+                                                                                {{ $menu->title }}
+                                                                            </a>
+                                                                        @endforeach
+                                                                    </div>
+                                                                </div>
+                                                            @endif
+                                                        </div>
+                                                    @endforeach
+
+                                                </div>
+                                            </div>
+                                        @endif
+                                    </div>
+                                @endforeach
+                                {{-- <div
                                     class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true]
                                     md:[--is-collapse:false] ">
                                     <button id="hs-header-base-dropdown" type="button"
@@ -118,8 +213,7 @@
 
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End Dropdown -->
+                                </div>                               
 
                                 <div
                                     class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true] md:[--is-collapse:false] ">
@@ -157,36 +251,7 @@
                                                     Colours
                                                 </a>
                                             </div>
-                                            {{-- <div
-                                                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] [--is-collapse:true] md:[--is-collapse:false] relative">
-                                                <button id="hs-header-base-dropdown-sub" type="button"
-                                                    class="hs-dropdown-toggle w-full flex justify-between items-center text-sm text-gray-800 rounded-lg p-2 md:px-3 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
-                                                    Exterior Wall Paints
-
-                                                </button>
-
-
-                                            </div>
-                                            <div
-                                                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] [--is-collapse:true] md:[--is-collapse:false] relative">
-                                                <button id="hs-header-base-dropdown-sub" type="button"
-                                                    class="hs-dropdown-toggle w-full flex justify-between items-center text-sm text-gray-800 rounded-lg p-2 md:px-3 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
-                                                    Metal & Wood Finishes
-
-                                                </button>
-
-
-                                            </div>
-                                            <div
-                                                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] [--is-collapse:true] md:[--is-collapse:false] relative">
-                                                <button id="hs-header-base-dropdown-sub" type="button"
-                                                    class="hs-dropdown-toggle w-full flex justify-between items-center text-sm text-gray-800 rounded-lg p-2 md:px-3 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300">
-                                                    Waterproofing
-
-                                                </button>
-
-
-                                            </div> --}}
+                                       
 
                                         </div>
                                     </div>
@@ -254,7 +319,7 @@
                                     </button>
 
                                 
-                                </div>
+                                </div> --}}
 
 
                             </div>
@@ -285,16 +350,16 @@
                                             </svg>
                                         </div>
                                         <form action="{{ route('search') }}" method="GET">
-                                        <input
-                                            class="py-3 ps-10 pe-4 block w-full border-gray-200 rounded-lg 
+                                            <input
+                                                class="py-3 ps-10 pe-4 block w-full border-gray-200 rounded-lg 
                                             text-sm focus:border-blue-500 focus:ring-blue-500 
                                             disabled:opacity-50 disabled:pointer-events-none 
                                             dark:bg-neutral-900 dark:border-neutral-700 
                                             dark:text-neutral-400 dark:placeholder-neutral-500 
-                                            dark:focus:ring-neutral-600" name="query" 
-                                            type="text" role="combobox" aria-expanded="false"
-                                            placeholder="Search.." value="{{ request('query') }}"
-                                            data-hs-combo-box-input="">
+                                            dark:focus:ring-neutral-600"
+                                                name="query" type="text" role="combobox" aria-expanded="false"
+                                                placeholder="Search.." value="{{ request('query') }}"
+                                                data-hs-combo-box-input="">
                                         </form>
                                     </div>
                                 </div>
@@ -303,7 +368,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Collapse -->
+            </div>
         </nav>
     </header>
     <!-- ========== END HEADER ========== -->

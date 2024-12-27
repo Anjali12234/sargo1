@@ -34,6 +34,11 @@
                         Contact Us
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('whyChooseUs')}}" class="text-gray-600 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200">
+                        Why Choose Us
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- End About Section -->

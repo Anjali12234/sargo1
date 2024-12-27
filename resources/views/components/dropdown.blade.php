@@ -1,35 +1,19 @@
-@props(['align' => 'right', 'width' => '48', 'contentClasses' => 'py-1 bg-white'])
+<div {{ $attributes->merge(['class' => 'hs-dropdown [--strategy:static] md:[--strategy:absolute] relative']) }}>
+    <button type="button" 
+        class="hs-dropdown-toggle w-full flex justify-between items-center text-sm text-gray-800 rounded-lg p-2 md:px-3 hover:bg-gray-100 focus:outline-none dark:text-neutral-400 dark:hover:bg-neutral-700">
+        {{ $title }}
+        <svg class="hs-dropdown-open:rotate-180 duration-300 ms-auto shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m6 9 6 6 6-6" />
+        </svg>
+    </button>
 
-@php
-$alignmentClasses = match ($align) {
-    'left' => 'ltr:origin-top-left rtl:origin-top-right start-0',
-    'top' => 'origin-top',
-    default => 'ltr:origin-top-right rtl:origin-top-left end-0',
-};
-
-$width = match ($width) {
-    '48' => 'w-48',
-    default => $width,
-};
-@endphp
-
-<div class="relative" x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false">
-    <div @click="open = ! open">
-        {{ $trigger }}
-    </div>
-
-    <div x-show="open"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 scale-95"
-            x-transition:enter-end="opacity-100 scale-100"
-            x-transition:leave="transition ease-in duration-75"
-            x-transition:leave-start="opacity-100 scale-100"
-            x-transition:leave-end="opacity-0 scale-95"
-            class="absolute z-50 mt-2 {{ $width }} rounded-md shadow-lg {{ $alignmentClasses }}"
-            style="display: none;"
-            @click="open = false">
-        <div class="rounded-md ring-1 ring-black ring-opacity-5 {{ $contentClasses }}">
-            {{ $content }}
+    @if ($items->isNotEmpty())
+        <div class="hs-dropdown-menu transition-[opacity,margin] duration-[150ms] opacity-0 relative md:w-48 hidden z-10 md:mt-2 md:top-0 md:end-full ps-7 md:ps-0 md:bg-white md:rounded-lg md:shadow-md dark:md:bg-neutral-800">
+            <div class="p-1 space-y-1">
+                @foreach ($items as $item)
+                    <x-dropdown :title="$item->title" :items="$item->children" />
+                @endforeach
+            </div>
         </div>
-    </div>
+    @endif
 </div>

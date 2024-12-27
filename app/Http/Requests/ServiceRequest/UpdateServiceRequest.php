@@ -20,6 +20,8 @@ class UpdateServiceRequest extends FormRequest
             'slug' => ['required','string'],
             'image' => ['nullable','image'],
             'description' => ['required'],
+            'slider_page' => ['required','string'],
+
         ];
     }
 }

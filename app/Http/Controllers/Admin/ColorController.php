@@ -12,8 +12,12 @@ use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
 
-class ColorController extends Controller
+class ColorController extends BaseController
 {
+    public function __construct()
+    {
+        parent::__construct();
+    }
     public function create()
     {
         $colorCategories = ColorCategory::all();
