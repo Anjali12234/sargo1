@@ -8,6 +8,9 @@ use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
 
 
+Route::get('/dropdown', function () {
+    return view('dropdown');
+})->name('dropdown');
 
 Route::controller(FrontendController::class)->group(function () {
     Route::get('/', 'index')->name('welcome');
@@ -15,11 +18,15 @@ Route::controller(FrontendController::class)->group(function () {
     Route::get('color/{color:slug}','colorDetail')->name('colorDetail');
     Route::get('contact','contact')->name('contact');
     Route::get('about','about')->name('about');
+    Route::get('whyChooseUs','whyChooseUs')->name('whyChooseUs');
 
     Route::get('productCategory/{productCategory:slug}', 'productCategory')->name('productCategory');
     Route::get('product/{product:slug}','productDetail')->name('productDetail');
     Route::get('/service/{value}', 'service')->name('service');
     Route::post('enquiry','enquiry')->name('enquiry');
+    Route::get('detail/{slug}', 'staticMenus')->name('static');
+    Route::get('category/{category:slug}', [FrontendController::class, 'category'])->name('category');
+    Route::get('categoryList/{categoryList:slug}', [FrontendController::class, 'categoryList'])->name('categoryList');
 
 });
 Route::post('upload', [UploadController::class, 'store'])->name('upload');

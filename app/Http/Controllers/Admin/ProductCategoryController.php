@@ -9,7 +9,7 @@ use App\Models\ProductCategory;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class ProductCategoryController extends Controller
+class ProductCategoryController extends BaseController
 {
     public function create()
     {

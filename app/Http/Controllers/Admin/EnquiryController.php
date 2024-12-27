@@ -7,11 +7,9 @@ use App\Models\Enquiry;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class EnquiryController extends Controller
+class EnquiryController extends BaseController
 {
-    /**
-     * Display a listing of the resource.
-     */
+   
     public function index()
     {
         $enquirys=Enquiry::latest()->paginate();
@@ -41,4 +39,21 @@ class EnquiryController extends Controller
         Alert::success('Enquiry message deleted successfully');
         return back();
     }
+
+    public function deleteNotification(Enquiry $enquiry)
+    {
+        $enquiry->update([
+            'notificable_id' => !$enquiry->notificable_d
+        ]);
+        return back();
+    }
+
+    public function readAllNotification()
+    {
+        foreach (auth()->user()->unreadNotifications as $notification) {
+            $notification->markAsRead();
+        }
+        return back();
+    }
+  
 }

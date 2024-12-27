@@ -2,7 +2,7 @@
 
 @section('mainContainer')
 
-    <x-carousel :sliders="$sliders" />
+    <x-carousel :services="$services" />
     {{-- popup --}}
 
     <div class="relative">

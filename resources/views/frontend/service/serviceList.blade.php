@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('mainContainer')
-<x-carousel :sliders="$sliders"/>
+<x-carousel :services="$services"/>
 
 <div class="mx-5 lg:mx-20 my-5 lg:my-10">
     <div class="text-center">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Support\Facades\Storage;
 
 abstract class Controller
@@ -12,4 +13,6 @@ abstract class Controller
             Storage::disk('public')->delete($url);
         }
     }
+
+    
 }

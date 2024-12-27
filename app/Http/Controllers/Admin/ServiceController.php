@@ -6,14 +6,20 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ServiceRequest\StoreServiceRequest;
 use App\Http\Requests\ServiceRequest\UpdateServiceRequest;
 use App\Models\Service;
+use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class ServiceController extends Controller
+class ServiceController extends BaseController
 {
-    public function create()
+    public function index()
     {
         $services = Service::paginate(10);
-        return view('admin.service.create',compact('services',));
+        return view('admin.service.index',compact('services'));
+
+    }
+    public function create()
+    {
+        return view('admin.service.create');
     }
     
     public function store(StoreServiceRequest $request)
@@ -36,6 +42,19 @@ class ServiceController extends Controller
         return redirect(route('admin.service.create'));
     }
 
+    public function updateSlider(Request $request, Service $service)
+    {
+        $validated = $request->validate([
+            'slider_page' => 'required','string',
+        ]);
+    
+        $service->update([
+            'slider_page' => $validated['slider_page'],
+        ]);
+    
+        return back();
+    }
+    
     public function destroy(Service $service)
     {
         $service->delete();

@@ -8,8 +8,12 @@ use App\Http\Requests\ColorCategory\UpdateColorCategoryRequest;
 use App\Models\ColorCategory;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class ColorCategoryController extends Controller
+class ColorCategoryController extends BaseController
 {
+    public function __construct()
+    {
+        parent::__construct();
+    }
     public function create()
     {
         $colorCategories = ColorCategory::paginate(10);

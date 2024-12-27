@@ -19,6 +19,7 @@ class StoreServiceRequest extends FormRequest
             'type' => ['required','string'],
             'image' => ['required','image'],
             'description' => ['required'],
+            'slider_page' => ['required','string'],
         ];
     }
 }

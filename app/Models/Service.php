@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Enums\ServiceType;
+use App\Enums\SliderTypeEnum;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -21,9 +23,14 @@ class Service extends Model
         'description',
         'slug',
         'position',
+        'slider_page',
+
         
     ];
-
+    protected $casts = [
+        'slider_page' => SliderTypeEnum::class,
+        'type' => ServiceType::class,
+    ];
     protected function image(): Attribute
     {
         return Attribute::make(

@@ -76,48 +76,61 @@
                 </a>
             </div>
         </div>
-        {{-- <div class="user-notification">
+        <div class="user-notification">
             <div class="dropdown">
                 <a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown"
                     aria-haspopup="false" aria-expanded="false" id="noti-tour">
                     <i @class([
-                        'ring-bell' => count(auth()->user()->unreadNotifications ?? []) > 0,
+                        'ring-bell' => count($user->unreadNotifications ?? []) > 0,
                         'dw dw-notification',
                         'noti-icon',
                     ])></i>
                     <span
-                        class="badge {{ count(auth()->user()->unreadNotifications ?? []) > 0 ? 'bg-danger d-block' : 'd-none' }} rounded-circle noti-icon-badge text-white"
-                        style="height: 15px; width: 15px; padding:2px;">
-                        {{ count(auth()->user()->unreadNotifications ?? []) }}
+                        class="badge {{ count($user->unreadNotifications ?? []) > 0 ? 'bg-danger d-block' : 'd-none' }} rounded-circle
+                         noti-icon-badge"
+                        style="height: 15px; width: 15px; padding:1px;">
+                        {{ count($user->unreadNotifications ?? []) }}
                     </span>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <div class="notification-list mx-h-350 customscroll">
-                        <ul>
-                           @forelse (auth()->user()->unreadNotifications as $notification)
 
-                            <li class="row flex">
-                                <a href="#">
-                                    <img src="{{ asset('assets/backend/vendors/images/logo.png') }}" alt="" />
-                                    <h3>{{ $notification->data['username'] }}</h3>
-                                    <p>
-                                        register in system
-                                    </p>
-                                </a>
-                                <a class="float-right" href="{{ route('admin.markasread',$notification->id) }}"> <i class="icon-copy bi bi-x"></i></a>
-                            </li>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="notification-list mx-h-200 customscroll">
+                        <a href="{{route('admin.enquiry.readAllNotification')}}" class="text-dark">
+                            <i class="icon-copy dw dw-delete-3 mr-1"></i>clear all
+                          </a> <span>notification</span>
+                        <ul>
+                            @forelse ($user->unreadNotifications ?? [] as $notification)
+                                <div class="alert alert-dismissible fade show" role="alert"
+                                    data-notification-id="{{ $notification->id }}">
+                                    <strong>{{ $notification->data['full_name'] }}</strong> sent you a message.
+
+                                    <form action="{{ route('admin.enquiry.deleteNotification',$notification) }}" method="post"
+                                        style="display: inline">
+                                        @csrf
+                                        @method('put')
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+
+                                    </form>
+
+                                </div>
                             @empty
-                            <li>
-                                <p>
-                                    No records
-                                </p>
-                            </li>
-                        @endforelse
+                                <li>
+                                    <p>
+                                        No records
+                                    </p>
+                                </li>
+                            @endforelse
+
+
                         </ul>
                     </div>
                 </div>
+
             </div>
-        </div> --}}
+        </div>
         <div class="user-info-dropdown">
             <div class="dropdown">
                 <a
@@ -138,6 +151,9 @@
                 >
                     <a class="dropdown-item" href="{{ route('admin.profile.edit') }}"
                         ><i class="dw dw-user1"></i> Profile</a
+                    >
+                    <a class="dropdown-item" href="{{ route('admin.category.index') }}"
+                        ><i class="dw dw-user1"></i> Category</a
                     >
                     
                     <form method="POST" action="{{ route('logout') }}">
