@@ -21,8 +21,7 @@ class StoreCategoryListRequest extends FormRequest
             'status' => ['nullable', 'boolean'],
             'category_id' => ['nullable', Rule::exists('categories', 'id')->withoutTrashed()],
             'image' => ['required', 'image'],
-            'slider_page' => ['required', 'array'], // Validate as an array
-            'slider_page.*' => ['required', 'string'],
+         
 
         ];
     }

@@ -23,13 +23,7 @@ class CategoryList extends Model
         'image',
         'slug',
         'position',
-        'slider_page',
-
-
-    ];
-
-    protected $casts = [
-        'slider_page' => 'array',
+        
     ];
     public function sluggable(): array
     {

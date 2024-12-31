@@ -5,17 +5,16 @@
     "isAutoPlay": true
   }'
     class="relative">
-    <div class="hs-carousel relative overflow-hidden w-full min-h-[550px] bg-white">
+    <div class="hs-carousel relative overflow-hidden w-full h-96 bg-white">
         <div
             class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-[2000ms] opacity-0">
             @foreach ($sliders as $slider)
-                <div class="hs-carousel-slide">
-                    <a href="{{ route('categoryList', $slider) }}">
-                    <img src="{{ $slider->image }}" alt="{{ $slider->title }}"
-                        class="w-full h-full object-cover">
-                    </a>
-                </div>
-            @endforeach
+            <div class="hs-carousel-slide">
+                <a href="{{ route('category', $slider) }}">
+               <img src="{{$slider->bg_image}}" alt="{{ $slider->title }}" class="w-full h-96">
+                </a>
+            </div>
+        @endforeach
         </div>
     </div>
    

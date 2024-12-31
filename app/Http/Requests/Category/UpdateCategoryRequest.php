@@ -16,9 +16,9 @@ class UpdateCategoryRequest extends FormRequest
     {
         return [
             'title' => ['required', 'string'],
-            'bg_image' => ['required', 'image'],
+            'bg_image' => ['nullable', 'image'],
             'description' => ['nullable'],
-            
+         
         ];
     }
 }

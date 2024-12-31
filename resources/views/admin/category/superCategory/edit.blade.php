@@ -47,7 +47,22 @@
                             @enderror
                         </span>
                     </div>
-
+                    <div class="form-group col-md-6">
+                        <label>Slider Pages</label>
+                        <select class="custom-select2 form-control" name="slider_page[]" multiple style="width: 100%; height: 38px">
+                            @foreach (\App\Enums\SliderTypeEnum::cases() as $case)
+                                <option value="{{ $case->value }}" 
+                                    {{ in_array($case->value, old('slider_page', $superCategory->slider_page ?? [])) ? 'selected' : '' }}>
+                                    {{ $case->label() }}
+                                </option>
+                            @endforeach
+                        </select>
+                        <span class="text-warning">
+                            @error('slider_page')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                     <div class="form-group col-md-6">
                         <label for="bg_image">Bg Image</label>
                         <img src="{{ $superCategory?->bg_image }}" height="100" width="100" alt="">

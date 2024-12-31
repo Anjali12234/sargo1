@@ -1,19 +1,14 @@
 @extends('frontend.layouts.master')
 
 @section('mainContainer')
-    <div class="relative w-full sm:w-auto">
-        <img src="{{ asset('assets/frontend/staticimage/banner1.jpg') }}" alt="Ad Image 1" class="w-full h-96">
-        <div class="absolute inset-0 flex flex-col mt-20 items-center bg-opacity-50 text-white px-3 rounded">
-            <p class="text-6xl font-semibold text-center mt-3"> <span> Get In Touch</span>
-            </p>
+<x-carousel :sliders="$sliders" />
 
-        </div>
-    </div>
     
 
     <h1 class="mt-14 text-3xl font-bold text-center hover:text-blue-800">Connect with us easily</h1>
     <div class="relative w-full sm:w-auto block md:grid grid-cols-2 mt-5">
-        <div class="mx-5  lg:ml-20 lg:mr-[-2rem]  my-5 lg:my-10">
+        <div class="mx-5 my-5 lg:my-10">
+        {{-- <div class="mx-5  lg:ml-20 lg:mr-[-2rem]  my-5 lg:my-10"> --}}
             <div class="mt-6">
                 <div
                     class="grid sm:grid-cols-2 items-start gap-14 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md font-[sans-serif]">
@@ -171,11 +166,18 @@
             </div>
         </div>
 
-        <div class="mx-5 lg:mx-20 my-5 lg:my-10">
+        {{-- <div class="mx-5 lg:mx-20 my-5 lg:my-10"> --}}
+            <div class="ml-[4rem] mx-5 my-5 lg:my-10">
             <div class="mt-6">
+                <div class="w-50">
+                
+                    {!!  systemSetting()?->map_url !!}
+                </div>
+            </div>
+            {{-- <div class="mt-6">
                 <iframe src="{{ systemSetting()->map_url }}" class="w-full h-[40rem] object-cover" style="border:0;"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

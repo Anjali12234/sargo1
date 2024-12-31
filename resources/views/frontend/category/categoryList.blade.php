@@ -2,14 +2,13 @@
 
 @section('mainContainer')
     <div class="relative w-full sm:w-auto">
-        <img src="{{$category->bg_image}}"
-        alt="Ad Image 1" class="w-full h-96">
-        <div class="absolute inset-0 flex flex-col mt-10 items-center bg-opacity-50 text-white px-3 rounded">
+        <img src="{{ $category->bg_image }}" alt="Ad Image 1" class="w-full h-96">
+        {{-- <div class="absolute inset-0 flex flex-col mt-10 items-center bg-opacity-50 text-white px-3 rounded">
             <h1 class="font-slabo  text-center text-sm"></h1>
             <p class="text-5xl font-semibold text-center mt-3"> <span>{{ $category->title }}</span>
             </p>
 
-        </div>
+        </div> --}}
     </div>
 
     <div class="text-center p-10">
@@ -17,9 +16,9 @@
         <h1 class="text-3xl"></h1>
     </div>
 
-    <div class="mx-5 lg:mx-20 my-5 lg:my-10">   
-      
-    
+    <div class="mx-5 lg:mx-20 my-5 lg:my-10">
+
+
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-5 lg:gap-10">
             @foreach ($category->categoryLists as $categoryList)
                 <div>
@@ -31,15 +30,13 @@
                     <div class="mt-4">
                         <a href="{{ route('categoryList', $categoryList) }}"
                             class="inline-block w-full text-center bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700">
-                            View 
+                            View
                         </a>
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
-
-  
 @endsection
 
 </html>

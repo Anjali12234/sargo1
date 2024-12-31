@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('bg_image')->nullable();
             $table->longText('description')->nullable();
             $table->string('slug')->nullable();
+            $table->string('slider_page')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
