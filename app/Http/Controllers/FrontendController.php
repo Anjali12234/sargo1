@@ -25,13 +25,13 @@ class FrontendController extends Controller
     public function index()
     {
         session()->flash('showPopup', true);
-        $sliders = CategoryList::where('slider_page', 'LIKE', '%index%')->get();
+        $sliders = Category::where('slider_page', 'LIKE', '%index%')->get();
         return view('frontend.index', compact('sliders'));
     }
 
     public function productCategory(ProductCategory $productCategory)
     {
-        $sliders = CategoryList::where('slider_page', 'LIKE', '%product%')->get();
+        $sliders = Category::where('slider_page', 'LIKE', '%product%')->get();
 
         return view('frontend.product.productList', compact('productCategory', 'sliders'));
     }
@@ -55,7 +55,9 @@ class FrontendController extends Controller
     }
     public function contact()
     {
-        return view('frontend.contact');
+        $sliders = Category::where('slider_page', 'LIKE', '%contact_us%')->get();
+
+                return view('frontend.contact',compact('sliders'));
     }
     public function about()
     {
@@ -66,7 +68,7 @@ class FrontendController extends Controller
     {
         
         $whyChooses = WhyChoose::all();
-        $sliders = CategoryList::where('slider_page', 'LIKE', '%why_choose_us%')->get();
+        $sliders = Category::where('slider_page', 'LIKE', '%why_choose_us%')->get();
 
         return view('frontend.whyChooseUs',compact('whyChooses','sliders'));
     }
@@ -81,7 +83,6 @@ class FrontendController extends Controller
     {
         $user = User::first();
         $enquiry = Enquiry::create($request->validated());
-        // dd($request);
         Notification::send($user, new EnquiryNotification($enquiry));
         Alert::success('Enquiry submitted successfully');
         return back();
@@ -89,7 +90,6 @@ class FrontendController extends Controller
 
     public function category(Category $category)
     {
-// dd($category);
         return view('frontend.category.categoryList', compact('category'));
     }
 
@@ -103,7 +103,9 @@ class FrontendController extends Controller
         switch ($slug) {
 
             case 'contact':
-                return view('frontend.contact');
+                $sliders = Category::where('slider_page', 'LIKE', '%contact_us%')->get();
+
+                return view('frontend.contact',compact('sliders'));
                 break;
             case 'about':
                 $abouts = About::all();
@@ -115,7 +117,7 @@ class FrontendController extends Controller
                 break;
             case 'whyChooseUs':
                 $whyChooses = WhyChoose::all();
-                $sliders = Slider::where('type', 'service')->get();
+                $sliders = Category::where('slider_page', 'LIKE', '%why_choose_us%')->get();
                 return view('frontend.whyChooseUs',compact('whyChooses','sliders'));
                 break;
 

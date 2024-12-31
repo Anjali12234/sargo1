@@ -6,6 +6,7 @@ enum SliderTypeEnum:string
 {
     case Category = 'category';
     case WhyChooseUs = 'why_choose_us';
+    case ContactUs = 'contact_us';
     case Index = 'index';
     case Product = 'product';
 
@@ -19,6 +20,7 @@ enum SliderTypeEnum:string
         return match ($value) {
             self::WhyChooseUs => 'WhyChooseUs',
             self::Category => 'Category',
+            self::ContactUs => 'ContactUs',
             self::Index => 'Index',
             self::Product => 'Product',
         };

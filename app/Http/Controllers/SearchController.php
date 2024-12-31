@@ -10,17 +10,17 @@ use Illuminate\Http\Request;
 class SearchController extends Controller
 {
     public function search(Request $request)
-        
-        {
-            $query = $request->input('query');
-    
-            // Search logic for each model
-            $products = Product::where('title', 'LIKE', "%{$query}%")->get();
-            $services = Service::where('title', 'LIKE', "%{$query}%")->get();
-            $colors = Color::where('name', 'LIKE', "%{$query}%")->get();
-    
-            return view('frontend.search-results', compact('query', 'products', 'services', 'colors'));
-        }
+
+    {
+        $query = $request->input('query');
+
+        // Search logic for each model
+        $products = Product::where('title', 'LIKE', "%{$query}%")->get();
+        $services = Service::where('title', 'LIKE', "%{$query}%")->get();
+        $colors = Color::where('name', 'LIKE', "%{$query}%")->get();
+
+        return view('frontend.search-results', compact('query', 'products', 'services', 'colors'));
+    }
     // public function search(Request $request)
     // {
     //     $query = $request->input('search'); // Get search input

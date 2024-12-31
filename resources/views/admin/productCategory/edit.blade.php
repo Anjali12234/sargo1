@@ -105,7 +105,7 @@
                 </div>
                 <div class="col-md-12 row">
                     <div class="form-group col-md-12">
-                        <label for="description">Description</label>
+                        <label for="description">Background Title</label>
                         <textarea name="description" id="editor" cols="50" rows="10">{{ old('description', $productCategory->description) }}</textarea>
                         <span class="text-warning">
                             @error('description')

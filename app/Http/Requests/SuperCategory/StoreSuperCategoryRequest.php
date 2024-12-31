@@ -18,6 +18,8 @@ class StoreSuperCategoryRequest extends FormRequest
             'title' => ['required', 'string'],
             'bg_image' => ['required','image'],
             'description' => ['nullable'],
+            'slider_page' => ['required', 'array'], // Validate as an array
+            'slider_page.*' => ['required', 'string'],
         ];
     }
 }

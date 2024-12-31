@@ -21,7 +21,7 @@ return new class extends Migration
             $table->boolean('status')->default(1);
             $table->longText('description')->nullable();
             $table->integer('position')->nullable();
-            $table->string('slider_page')->nullable();
+           
 
             $table->softDeletes();
             $table->timestamps();
