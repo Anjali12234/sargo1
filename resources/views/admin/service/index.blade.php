@@ -70,7 +70,7 @@
                                                 @endforeach
                                             </select>
                                             <span class="text-warning">
-                                                @error('slider_page')
+                                                @error('slider_page') 
                                                     {{ $message }}
                                                 @enderror
                                             </span>

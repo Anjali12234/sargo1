@@ -117,7 +117,7 @@
                     <div class="form-group">
                         <label for="instagram_url">Instagram </label>
                         <input class="form-control" name="instagram_url" id="instagram_url"
-                            value="{{ old('instagram_url', $systemSetting?->instagram_url) }}" type="text"
+                            value="{{ old('instagram_url', $systemSetting?->instagram_url) }}" type="url"
                             placeholder="Instagram Url">
                         <span class="text-warning">
                             @error('instagram_url')
@@ -128,7 +128,7 @@
                     <div class="form-group">
                         <label for="facebook_url">Facebook </label>
                         <input class="form-control" name="facebook_url" id="facebook_url"
-                            value="{{ old('facebook_url', $systemSetting?->facebook_url) }}" type="text"
+                            value="{{ old('facebook_url', $systemSetting?->facebook_url) }}" type="url"
                             placeholder="Facebook Url">
                         <span class="text-warning">
                             @error('facebook_url')
@@ -139,7 +139,7 @@
                     <div class="form-group">
                         <label for="twitter_url">Twitter </label>
                         <input class="form-control" name="twitter_url" id="twitter_url"
-                            value="{{ old('twitter_url', $systemSetting?->twitter_url) }}" type="text"
+                            value="{{ old('twitter_url', $systemSetting?->twitter_url) }}" type="url"
                             placeholder="Twitter Url">
                         <span class="text-warning">
                             @error('twitter_url')
@@ -150,7 +150,7 @@
                     <div class="form-group">
                         <label for="youtube_url">Youtube </label>
                         <input class="form-control" name="youtube_url" id="youtube_url"
-                            value="{{ old('youtube_url', $systemSetting?->youtube_url) }}" type="text"
+                            value="{{ old('youtube_url', $systemSetting?->youtube_url) }}" type="url"
                             placeholder="Youtube Url">
                         <span class="text-warning">
                             @error('youtube_url')
@@ -160,9 +160,10 @@
                     </div>
                     <div class="form-group">
                         <label for="map_url">Map </label>
-                        <input class="form-control" name="map_url"
-                            id="map_url"value="{{ old('map_url', $systemSetting?->map_url) }}" type="text"
-                            placeholder="Map Url">
+                        {{-- <input class="form-control" name="map_url"
+                            id="map_url"value="" type="url"
+                            placeholder="Map Url"> --}}
+                            <textarea class="form-control" type="map_url"  placeholder="Map Url" name="map_url" id="map_url">{{ old('map_url', $systemSetting?->map_url) }}</textarea>
                         <span class="text-warning">
                             @error('map_url')
                                 {{ $message }}

@@ -4,7 +4,8 @@ namespace App\Enums;
 
 enum SliderTypeEnum:string
 {
-    case Service = 'service';
+    case Category = 'category';
+    case WhyChooseUs = 'why_choose_us';
     case Index = 'index';
     case Product = 'product';
 
@@ -16,7 +17,8 @@ enum SliderTypeEnum:string
     public static function getLabel(self $value): string
     {
         return match ($value) {
-            self::Service => 'Service',
+            self::WhyChooseUs => 'WhyChooseUs',
+            self::Category => 'Category',
             self::Index => 'Index',
             self::Product => 'Product',
         };

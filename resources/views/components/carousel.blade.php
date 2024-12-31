@@ -1,4 +1,4 @@
-@props(['services'])
+@props(['sliders'])
 <div data-hs-carousel='{
     "loadingClasses": "opacity-0",
     "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
@@ -8,10 +8,12 @@
     <div class="hs-carousel relative overflow-hidden w-full min-h-[550px] bg-white">
         <div
             class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-[2000ms] opacity-0">
-            @foreach ($services as $service)
+            @foreach ($sliders as $slider)
                 <div class="hs-carousel-slide">
-                    <img src="{{ $service->image }}" alt="{{ $service->title }}"
+                    <a href="{{ route('categoryList', $slider) }}">
+                    <img src="{{ $slider->image }}" alt="{{ $slider->title }}"
                         class="w-full h-full object-cover">
+                    </a>
                 </div>
             @endforeach
         </div>

@@ -46,7 +46,34 @@
                         </span>
                     </div>
                                      
+                    <div class="form-group col-md-6">
+                        <label for="bg_image">Bg Image</label>
 
+                        <input class="form-control" id="bg_image" name="bg_image" type="file"
+                            value="{{ old('bg_image') }}" />
+                        <span class="text-warning">
+                            @error('bg_image')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+
+
+                </div>
+                <div class="col-md-12 row">
+                    <div class="form-group col-md-12">
+                        <label for="title">Description</label>
+                        <textarea name="description" id="editor" cols="50" rows="10">{{ old('description') }}</textarea>
+                        <span class="text-warning">
+                            @error('title')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+
+
+
+                </div>
 
                 </div>
                 

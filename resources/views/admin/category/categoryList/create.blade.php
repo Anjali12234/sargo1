@@ -50,6 +50,21 @@
                         </span>
                     </div>
                     <div class="form-group col-md-6">
+                        <label>Slider Pages</label>
+                        <select class="custom-select2 form-control" name="slider_page[]" multiple style="width: 100%; height: 38px">
+                            <option value="" disabled>Select Slider Pages</option>
+                            @foreach (\App\Enums\SliderTypeEnum::cases() as $case)
+                                <option value="{{ $case->value }}">{{ $case->label() }}</option>
+                            @endforeach
+                        </select>
+                        <span class="text-warning">
+                            @error('slider_page')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+                    
+                    <div class="form-group col-md-6">
                         <label for="title">Title</label>
                         <input class="form-control" id="title" name="title" type="text"
                             value="{{ old('title') }}" />
