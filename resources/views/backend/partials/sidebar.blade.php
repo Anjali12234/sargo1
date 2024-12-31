@@ -24,12 +24,12 @@
                     </a>
 
                 </li>
-                <li class="dropdown">
+                {{-- <li class="dropdown">
                     <a href="{{ route('admin.slider.create') }}" class="dropdown-toggle no-arrow">
                         <span class="micon bi bi-table"></span><span class="mtext">Slider</span>
                     </a>
 
-                </li>
+                </li> --}}
                 <li class="dropdown">
                     <a href="{{ route('admin.about.create') }}" class="dropdown-toggle no-arrow">
                         <span class="micon bi bi-table"></span><span class="mtext">About</span>
@@ -82,12 +82,12 @@
                 @endforeach
 
 
-                <li class="dropdown">
+                {{-- <li class="dropdown">
                     <a href="{{ route('admin.service.index') }}" class="dropdown-toggle no-arrow">
                         <span class="micon bi bi-archive"></span><span class="mtext">Services</span>
                     </a>
 
-                </li>
+                </li> --}}
                 <li class="dropdown">
                     <a href="{{ route('admin.enquiry.index') }}" class="dropdown-toggle no-arrow">
                         <span class="micon bi bi-archive"></span><span class="mtext">Enquiry Messages</span>

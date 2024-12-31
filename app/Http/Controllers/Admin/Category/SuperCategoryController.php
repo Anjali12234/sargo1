@@ -42,6 +42,7 @@ class SuperCategoryController extends BaseController
    
     public function update(UpdateSuperCategoryRequest $request, Category $category, Category $superCategory)
     {
+        // dd($superCategory);
         $superCategory->update($request->validated());
 
         Alert::success('Super Category updated successfully');

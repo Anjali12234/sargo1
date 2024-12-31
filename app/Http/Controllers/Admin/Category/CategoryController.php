@@ -27,9 +27,7 @@ class CategoryController extends BaseController
     }
 
     public function store(StoreCategoryRequest $request)
-    {
-
-      
+    {      
         Category::create($request->validated());
         Alert::success('Category added successfully');
         return redirect(route('admin.category.index'));

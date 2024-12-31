@@ -25,14 +25,14 @@ class FrontendController extends Controller
     public function index()
     {
         session()->flash('showPopup', true);
-        // $sliders = Slider::where('type', 'index')->get();
-        $services = Service::where('slider_page', 'index')->get();
-        return view('frontend.index', compact('services'));
+        $sliders = CategoryList::where('slider_page', 'LIKE', '%index%')->get();
+        return view('frontend.index', compact('sliders'));
     }
 
     public function productCategory(ProductCategory $productCategory)
     {
-        $sliders = Slider::where('type', 'product')->get();
+        $sliders = CategoryList::where('slider_page', 'LIKE', '%product%')->get();
+
         return view('frontend.product.productList', compact('productCategory', 'sliders'));
     }
     public function productDetail(Product $product)
@@ -66,7 +66,8 @@ class FrontendController extends Controller
     {
         
         $whyChooses = WhyChoose::all();
-        $sliders = Slider::where('type', 'service')->get();
+        $sliders = CategoryList::where('slider_page', 'LIKE', '%why_choose_us%')->get();
+
         return view('frontend.whyChooseUs',compact('whyChooses','sliders'));
     }
 
@@ -80,6 +81,7 @@ class FrontendController extends Controller
     {
         $user = User::first();
         $enquiry = Enquiry::create($request->validated());
+        // dd($request);
         Notification::send($user, new EnquiryNotification($enquiry));
         Alert::success('Enquiry submitted successfully');
         return back();
@@ -87,7 +89,7 @@ class FrontendController extends Controller
 
     public function category(Category $category)
     {
-
+// dd($category);
         return view('frontend.category.categoryList', compact('category'));
     }
 

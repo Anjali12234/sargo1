@@ -19,7 +19,8 @@ class Category extends Model
         'title',
         'position',
         'slug',
-        
+        'bg_image',
+        'description',
     ];
     public function sluggable(): array
     {
@@ -29,7 +30,13 @@ class Category extends Model
             ]
         ];
     }
-
+    protected function bgImage(): Attribute
+    {
+        return Attribute::make(
+            get: fn(?string $value) => $value ? Storage::disk('public')->url($value) : null,
+            set: fn($value) => $value ? $value->store('categories', 'public') : null,
+        );
+    }
     protected static function boot()
     {
         parent::boot();

@@ -19,14 +19,17 @@
             <div class="flex gap-3 items-center justify-center md:justify-end ml-10">
                 <div class="hidden lg:flex items-center gap-1 text-gray-700">
                     <span><i class="ti ti-phone h-6 text-lg"></i></span>
-                    <a href="tel:+977081567896" class="text-gray-700 hover:text-blue-500">+977 {{systemSetting()->phone_number}}</a>
+                    <a href="tel:+977081567896" class="text-gray-700 hover:text-blue-500">+977 {{systemSetting()?->phone_number}}</a>
                 </div>
 
                 <!-- Button -->
                 @if (Route::currentRouteName() !== 'welcome')
                     <!-- Button -->
                     <button type="button"
-                        class="py-[1px] px-2 inline-flex font-mono items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-emerald-400 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                        class="py-[1px] px-2 inline-flex font-mono items-center gap-x-2 text-sm 
+                        font-medium rounded-lg border border-transparent bg-emerald-400
+                         text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700
+                          disabled:opacity-50 disabled:pointer-events-none"
                         aria-haspopup="dialog" aria-expanded="false" data-hs-overlay="#hs-basic-modal">
                         Enquiry Form
                     </button>

@@ -11,12 +11,14 @@ class UpdateCategoryRequest extends FormRequest
         return true;
     }
 
-    
+
     public function rules(): array
     {
         return [
             'title' => ['required', 'string'],
-
+            'bg_image' => ['required', 'image'],
+            'description' => ['nullable'],
+            
         ];
     }
 }
