@@ -65,7 +65,7 @@ class MenuController extends BaseController
 
     public function destroy(Menu $menu)
     {
-        $menu->menus()->delete();
+        $menu->children()->delete();
         $menu->delete();
         Alert::success('Menu Deleted Successfully');
         return back();
