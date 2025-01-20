@@ -5,9 +5,9 @@
         <img src="{{ $productCategory->image }}"
             alt="Ad Image 1" class="w-full h-96">
         <div class="absolute inset-0 flex flex-col mt-10 items-center bg-opacity-50 text-white px-3 rounded">
-            <h1 class="font-slabo  text-center text-sm">{{ $productCategory->type->label() }}</h1>
-            <p class="text-5xl font-semibold text-center mt-3"> {{ $productCategory->description }}
-            </p>
+            <h1 class="font-slabo  text-center text-xl">{{ $productCategory->type->label() }}</h1>
+            <div class="text-5xl font-semibold text-center mt-3"> {!! $productCategory->description !!}
+            </div>
 
         </div>
     </div>
