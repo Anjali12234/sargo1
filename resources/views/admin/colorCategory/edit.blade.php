@@ -18,7 +18,14 @@
                         </ol>
                     </nav>
                 </div>
+                <div class="col-md-6 col-sm-12 text-right">
+                    <div class="dropdown">
+                        <a class="btn btn-primary " href="{{ route('admin.colorCategory.create') }}" role="button">
+                            Back
+                        </a>
 
+                    </div>
+                </div>
             </div>
         </div>
         <div class="pd-20 card-box mb-30">

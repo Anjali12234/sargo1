@@ -97,7 +97,7 @@
             </form>
 
         </div>
-        <div class="pd-20 card-box mb-30">
+        <div class="pd-20 card-box mb-30 mt-3">
             <div class="pd-20">
                 <h4 class="text-blue h4">Sub Category  List</h4>
 
