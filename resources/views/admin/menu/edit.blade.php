@@ -90,7 +90,7 @@
                         </span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label>Chosse Main Category</label>
+                        <label>Choose Main Category</label>
                         <select class="custom-select2 form-control" name="menu_type" style="width: 100%; height: 38px">
                             <option value="">Choose Main Category </option>
 
@@ -109,9 +109,9 @@
                         <select class="custom-select2 form-control" name="model_id" style="width: 100%; height: 38px">
                             <option value="">Choose Category</option>
                             @foreach (categories() as $sharedCategory)
-                                <option value="category_{{ $sharedCategory->id }}">{{ $sharedCategory->title }}</option>
+                                <option value="{{ $sharedCategory->id }}">{{ $sharedCategory->title }}</option>
                                 @foreach ($sharedCategory->categories as $superCategory)
-                                    <option value="category_{{ $superCategory->id }}" 
+                                    <option value="{{ $superCategory->id }}" 
                                         {{ old('model_id', 'category_' . $menu->model_id) == 'category_' . $superCategory->id ? 'selected' : '' }}>
                                         &nbsp;&nbsp;-- {{ $superCategory->title }}
                                     </option>
@@ -119,7 +119,7 @@
                             @endforeach
                             <option value="">Product</option>
                             @foreach ($productCategories as $productCategory)
-                                <option value="product_{{ $productCategory->id }}" 
+                                <option value="{{ $productCategory->id }}" 
                                     {{ old('model_id', 'product_' . $menu->model_id) == 'product_' . $productCategory->id ? 'selected' : '' }}>
                                     &nbsp;&nbsp;-- {{ $productCategory->title }}/{{ $productCategory->type }}
                                 </option>

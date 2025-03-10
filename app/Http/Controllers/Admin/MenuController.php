@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+
 use App\Http\Requests\Menu\StoreMenuRequest;
 use App\Http\Requests\Menu\UpdateMenuRequest;
 use App\Models\Category;
@@ -55,11 +55,8 @@ class MenuController extends BaseController
 
     public function update(UpdateMenuRequest $request, Menu $menu)
     {
-        
         $menu->update($request->validated() + $this->checkMenuCategory($request));
         Alert::success('Menu Updated Successfully');
-
-
         return redirect(route('admin.menu.index'));
     }
 

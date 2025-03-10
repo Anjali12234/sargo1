@@ -20,7 +20,7 @@ class UpdateMenuRequest extends FormRequest
                 'title' => ['required', 'string', 'max:255'],
                 'position' => ['nullable', 'integer'],
                 'menu_type' => ['nullable', Rule::in(config('menuTypes'))],
-                'model_id' => ['required_with:menu_type'],
+                'model_id' => ['required_with:menu_type', 'integer'],
                 'slug' => ['required', 'alpha_dash', Rule::unique('menus', 'slug')->withoutTrashed()->ignore($this->menu)],
                 'status' => ['nullable', 'boolean'],
         ];
