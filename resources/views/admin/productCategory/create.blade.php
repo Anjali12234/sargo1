@@ -117,7 +117,7 @@
                                 <td><img src="{{ $productCategory?->image }}" height="150" width="100" alt="">
                                 </td>
                                 <td>{{ $productCategory->title }}</td>
-                                <td>{{ $productCategory->type }}</td>
+                                <td>{{ $productCategory->type->label() }}</td>
                                 <td>
                                     <div class="dropdown">
                                         <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
