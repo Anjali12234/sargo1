@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-md-6 col-sm-12 text-right">
                     <div class="dropdown">
-                        <a class="btn btn-primary " href="{{ route('admin.productCategory.create') }}" role="button">
+                        <a class="btn btn-primary " href="{{ route('admin.productCategory.index') }}" role="button">
                             Back
                         </a>
 

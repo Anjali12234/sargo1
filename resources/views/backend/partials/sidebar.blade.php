@@ -40,7 +40,7 @@
                         <span class="micon bi bi-calendar4-week"></span><span class="mtext">Product</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="{{ route('admin.productCategory.create') }}">Product Category </a>
+                        <li><a href="{{ route('admin.productCategory.index') }}">Product Category </a>
                         </li>
                         <li><a href="{{ route('admin.product.index') }}">Product</a></li>
 

@@ -11,10 +11,14 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class ProductCategoryController extends BaseController
 {
-    public function create()
+    public function index()
     {
         $productCategories = ProductCategory::paginate(10);
-        return view('admin.productCategory.create',compact('productCategories'));
+        return view('admin.productCategory.index',compact('productCategories'));
+    }
+    public function create()
+    {
+        return view('admin.productCategory.create');
     }
     
     public function store(StoreProductCategoryRequest $request)
