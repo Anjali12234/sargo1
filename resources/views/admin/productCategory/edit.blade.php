@@ -52,7 +52,8 @@
                             <option value="">Type</option>
                             @foreach(\App\Enums\ProductCategoryEnum::cases() as $case)
                             <option value="{{ $case->value }}" 
-                                {{old('type',$productCategory->type)==$case->value ? 'selected':''}}>
+                                
+                                {{old('type',$productCategory->type->label())==$case->label() ? 'selected':''}}>
                             {{ $case->label() }}
                         </option>
                             @endforeach
