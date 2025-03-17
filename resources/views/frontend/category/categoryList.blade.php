@@ -25,7 +25,7 @@
          
             <div class="flex items-center justify-center ">
                 <a href="#" class="relative">
-                    <img class="w-48 h-56 object-cover" src="{{ $categoryList->image }}"
+                    <img class="w-full h-56 object-cover" src="{{ $categoryList->image }}"
                         alt="{{ $categoryList->title }}">
                 </a>
             </div>
