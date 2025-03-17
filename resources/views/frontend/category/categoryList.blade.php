@@ -16,27 +16,35 @@
         <h1 class="text-3xl"></h1>
     </div>
 
-    <div class="mx-5 lg:mx-20 my-5 lg:my-10">
+   
+    <section id="Projects"
+    class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
 
+    @foreach ($category->categoryLists as $categoryList)
+        <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+         
+            <div class="flex items-center justify-center ">
+                <a href="#" class="relative">
+                    <img class="w-48 h-56 object-cover" src="{{ $categoryList->image }}"
+                        alt="{{ $categoryList->title }}">
+                </a>
+            </div>
+            <!-- Product Details -->
+            <div class="px-4 py-3 w-72">
+                <p class="text-lg font-bold text-black truncate block capitalize">{{ $categoryList->title }}</p>
+                <p class="mt-3 text-sm text-justify">{!! Str::limit($categoryList->description, 150) !!}</p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-10 gap-5 lg:gap-10">
-            @foreach ($category->categoryLists as $categoryList)
-                <div>
-                    <img class="w-full h-40 sm:h-56 rounded-md transform transition-transform duration-300 ease-in-out hover:scale-110"
-                        src="{{ $categoryList->image }}" alt="">
-                    <p class="mt-3 text-lg font-semibold text-center sm:text-left">{{ $categoryList->title }}</p>
-                    <p class="mt-3 text-sm text-justify">{!! Str::limit($categoryList->description, 100) !!}</p>
-
-                    <div class="mt-4">
-                        <a href="{{ route('categoryList', $categoryList) }}"
-                            class="inline-block w-full text-center bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700">
-                            View
-                        </a>
-                    </div>
+                <!-- View Product Button -->
+                <div class="mt-4">
+                    <a href="{{ route('categoryList', $categoryList) }}"
+                        class="inline-block w-full text-center bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700">
+                        View Product
+                    </a>
                 </div>
-            @endforeach
+            </div>
         </div>
-    </div>
+    @endforeach
+</section>
 @endsection
 
 </html>
