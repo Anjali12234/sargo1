@@ -22,6 +22,13 @@
             <span class="text-danger">{{ $message }}</span>
         @enderror
     </div>
+    <div class="form-group">
+        <label for="keywords">Keyword</label>
+        <input id="keywords" type="text" class="form-control" wire:model="keywords">
+        @error('keywords')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+    </div>
 
     <div class="form-group">
         <label for="product_category_id">Category</label>

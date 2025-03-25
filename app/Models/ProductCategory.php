@@ -21,6 +21,8 @@ class ProductCategory extends Model
         'description',
         'slug',
         'position',
+        'keywords',
+
     ];
     protected $casts = [
         'type' => ProductCategoryEnum::class,

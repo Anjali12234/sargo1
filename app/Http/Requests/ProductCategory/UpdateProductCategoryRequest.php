@@ -17,6 +17,7 @@ class UpdateProductCategoryRequest extends FormRequest
         return [
             'title' => ['required','string'],
             'type' => ['required','string'],
+            'keywords' => ['required','string'],
             'slug' => ['required','string'],
             'image' => ['nullable','image'],
             'description' => ['required'],

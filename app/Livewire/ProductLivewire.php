@@ -17,6 +17,7 @@ class ProductLivewire extends Component
     public $image;
     public $bg_image;
     public $bg_title;
+    public $keywords;
     public $description;
     public $productCategories;
     public $product_category_id;
@@ -46,6 +47,7 @@ class ProductLivewire extends Component
 
         $this->title = $product->title;
         $this->bg_title = $product->bg_title;
+        $this->keywords = $product->keywords;
         $this->description = $product->description;
         $this->product_category_id = $product->product_category_id;
         $this->productKeyFeatures = $product->productKeyFeatures->map(function ($keyFeature) {
@@ -69,6 +71,7 @@ class ProductLivewire extends Component
             'product_category_id' => 'required|integer|exists:product_categories,id',
             'title' => 'required|string|max:255',
             'bg_title' => 'required|string|max:255',
+            'keywords' => 'required|string|max:255',
             'image' => 'nullable',
             'bg_image' => 'nullable',
             'description' => 'nullable|string',
@@ -89,6 +92,7 @@ class ProductLivewire extends Component
                 'product_category_id' => $this->product_category_id,
                 'title' => $this->title,
                 'bg_title' => $this->bg_title,
+                'keywords' => $this->keywords,
                 'description' => $this->description,
                 // Only update the image fields if new images are uploaded
                 'image' => $this->image,

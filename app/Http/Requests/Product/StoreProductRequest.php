@@ -18,6 +18,7 @@ class StoreProductRequest extends FormRequest
 
             'product_cateogory_id' => ['required'],
             'title' => ['required','string'],
+            'keywords' => ['required','string'],
             'image' => ['required','image'],
             'description' => ['required'],
         ];
