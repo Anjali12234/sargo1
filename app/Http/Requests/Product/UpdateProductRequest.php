@@ -18,6 +18,7 @@ class UpdateProductRequest extends FormRequest
 
             'product_cateogory_id' => ['required'],
             'title' => ['required','string'],
+            'keywords' => ['required','string'],
             'image' => ['nullable','image'],
             'description' => ['required'],
         ];

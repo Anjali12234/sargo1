@@ -1,4 +1,5 @@
 @extends('frontend.layouts.master')
+@section('title', $productCategory->keywords)
 
 @section('mainContainer')
     <div class="relative w-full sm:w-auto">

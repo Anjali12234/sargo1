@@ -54,6 +54,16 @@
                         </span>
                     </div>
                     <div class="form-group col-md-6">
+                        <label for="keywords">Keywords</label>
+                        <input class="form-control" id="keywords" name="keywords" type="text"
+                            value="{{ old('keywords',$productCategory->keywords) }}" />
+                        <span class="text-warning">
+                            @error('keywords')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+                    <div class="form-group col-md-6">
                         <label>Type</label>
                         <select class="custom-select2 form-control" name="type" style="width: 100%; height: 38px">
                             <option value="">Type</option>

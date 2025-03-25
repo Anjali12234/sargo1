@@ -3,12 +3,7 @@
 @section('mainContainer')
     <div class="relative w-full sm:w-auto">
         <img src="{{ $category->bg_image }}" alt="Ad Image 1" class="w-full h-96">
-        {{-- <div class="absolute inset-0 flex flex-col mt-10 items-center bg-opacity-50 text-white px-3 rounded">
-            <h1 class="font-slabo  text-center text-sm"></h1>
-            <p class="text-5xl font-semibold text-center mt-3"> <span>{{ $category->title }}</span>
-            </p>
-
-        </div> --}}
+       
     </div>
 
     <div class="text-center p-10">

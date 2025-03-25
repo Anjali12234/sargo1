@@ -1,5 +1,5 @@
 @extends('frontend.layouts.master')
-
+@section('title', $categoryList->title)
 @section('mainContainer')
     <div class="mx-4 lg:mx-20 my-8 lg:my-20">
         <div class="text-center my-6">

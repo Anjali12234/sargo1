@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Sargo,Wall color,Paint,Sargo Paints">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
-    <title>Sargo Paints</title>
+    <title>@yield('title', 'Sargo Paints Nepals best choice')</title>
 
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')

@@ -22,6 +22,7 @@ class Product extends Model
         'position',
         'bg_image',
         'bg_title',
+        'keywords',
     ];
 
     // protected function image(): Attribute
